@@ -67,7 +67,7 @@ const BottomNav = () => {
                         </svg>
                     )}
                 </div>
-                <span className={`text-[9px] font-medium transition-colors duration-300 ${isActive ? 'text-primary' : 'text-[#BFBFBF]'}`}>
+                <span className={`text-[10px] font-medium transition-colors duration-300 ${isActive ? 'text-primary' : 'text-[#BFBFBF]'}`}>
                     {item.label}
                 </span>
             </button>
@@ -78,13 +78,13 @@ const BottomNav = () => {
         <div className="fixed bottom-0 left-0 right-0 z-50 px-4 pb-4 pt-2">
             <div className="flex items-center justify-between gap-4 mx-auto max-w-[420px]">
                 {/* Main Nav Capsule - 3 buttons */}
-                <div className="glass-strong rounded-full h-[70px] flex items-center px-2 flex-1 bg-black/60 border-white/10 relative overflow-hidden">
-                    {/* Animated background pill - controlled by pillPosition state */}
+                <div className="glass-strong rounded-full h-[70px] flex items-center flex-1 bg-black/60 border-white/10 relative overflow-hidden">
+                    {/* Animated background pill - centered perfectly */}
                     <div
-                        className="absolute h-[56px] rounded-full bg-[#121212]"
+                        className="absolute h-[58px] rounded-full bg-[#121212]"
                         style={{
-                            width: 'calc(33.333% - 4px)',
-                            left: `calc(${pillPosition * 33.333}% + 6px)`,
+                            width: 'calc(33.333% - 8px)',
+                            left: `calc(${pillPosition * 33.333}% + 4px)`,
                             opacity: pillPosition >= 0 ? 1 : 0,
                             transition: 'all 800ms cubic-bezier(0.4, 0, 0.2, 1)'
                         }}

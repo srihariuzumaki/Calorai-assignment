@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import BottomNav from '../components/BottomNav';
 import GlassCard from '../components/GlassCard';
 import { analyzePreferences, getFavoriteCuisines } from '../utils/profileAnalysis';
+import { generateRecommendations } from '../utils/mealRecommendations';
 
 const ResultsScreen = () => {
     const [currentSection, setCurrentSection] = useState(0);
@@ -18,6 +19,7 @@ const ResultsScreen = () => {
     // Analyze preferences to generate insights
     const profile = analyzePreferences(preferences);
     const favoriteCuisines = getFavoriteCuisines(preferences.loved);
+    const recommendations = generateRecommendations(preferences);
 
     const sections = [
         {
@@ -201,6 +203,44 @@ const ResultsScreen = () => {
                     )}
                 </GlassCard>
             </div>
+
+            {/* Chef's Recommendations - Standout Feature */}
+            {recommendations.length > 0 && (
+                <div className="px-6 mb-6">
+                    <h2 className="text-sm font-semibold text-gray-400 mb-3 flex items-center gap-2">
+                        <span>👨‍🍳</span> Chef's Recommendations
+                    </h2>
+                    <div className="space-y-4">
+                        {recommendations.map((meal, index) => (
+                            <GlassCard key={meal.id} className="p-4 bg-primary/5 border-primary/20">
+                                <div className="flex justify-between items-start mb-2">
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-xl">{meal.icon}</span>
+                                        <h3 className="text-sm font-bold text-white">{meal.name}</h3>
+                                    </div>
+                                    <span className="text-[10px] bg-primary/20 text-primary px-2 py-0.5 rounded-full font-medium">
+                                        {meal.calories} kcal
+                                    </span>
+                                </div>
+                                <p className="text-[11px] text-gray-400 mb-2 leading-tight">{meal.description}</p>
+
+                                <div className="flex flex-wrap gap-2 mb-3">
+                                    {meal.ingredients.map((ing, i) => (
+                                        <span key={i} className="text-[10px] bg-white/5 border border-white/10 text-gray-300 px-2 py-1 rounded-md">
+                                            {ing}
+                                        </span>
+                                    ))}
+                                </div>
+
+                                <div className="flex items-center gap-1.5 pt-2 border-t border-white/5">
+                                    <span className="text-[10px] text-primary font-bold">MATCH</span>
+                                    <span className="text-[10px] text-gray-400 italic">{meal.matchReason}</span>
+                                </div>
+                            </GlassCard>
+                        ))}
+                    </div>
+                </div>
+            )}
 
             {/* Lifestyle & Goals */}
             <div className="px-6 mb-4">
