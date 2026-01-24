@@ -1,91 +1,21 @@
-/* ==================== CSS RESET ==================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-html, body {
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden;
-}
-
-/* ==================== CSS VARIABLES ==================== */
+/* CSS Variables for values not handled by Tailwind config directly */
 :root {
-  /* Colors */
-  --color-primary: #4BD883;
-  --color-secondary: #2EB5FF;
-  --color-error: #F95341;
-  
-  --color-text-primary: #FFFFFF;
-  --color-text-secondary: #D9D9D9;
-  --color-text-tertiary: #BFBFBF;
-  --color-text-muted: #404040;
-  
-  --color-bg-dark: #000000;
   --color-glass-bg: rgba(255, 255, 255, 0.05);
   --color-glass-border: rgba(255, 255, 255, 0.06);
-  
-  /* Gradients */
-  --gradient-bg: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
-  --gradient-accent: linear-gradient(135deg, #4BD883 0%, #3BA66B 100%);
-  
-  /* Spacing */
-  --spacing-xs: 4px;
-  --spacing-sm: 8px;
-  --spacing-md: 16px;
-  --spacing-lg: 24px;
-  --spacing-xl: 32px;
-  --spacing-2xl: 48px;
-  
-  /* Border Radius */
-  --radius-sm: 8px;
-  --radius-md: 16px;
-  --radius-lg: 24px;
-  --radius-xl: 30px;
-  --radius-2xl: 34px;
-  --radius-full: 50%;
-  
-  /* Blur */
-  --blur-sm: 10px;
   --blur-md: 20px;
   --blur-lg: 40px;
-  
-  /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
-  
-  /* Typography */
-  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --font-size-xs: 12px;
-  --font-size-sm: 14px;
-  --font-size-base: 16px;
-  --font-size-lg: 18px;
-  --font-size-xl: 24px;
-  --font-size-2xl: 32px;
-  --font-size-3xl: 40px;
-  
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-  
-  /* Layout */
-  --max-width-mobile: 400px;
-  --nav-height: 80px;
 }
 
-/* ==================== GLOBAL STYLES ==================== */
+/* Base styles */
 body {
-  font-family: var(--font-family);
-  font-size: var(--font-size-base);
-  color: var(--color-text-primary);
-  background: var(--gradient-bg);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  line-height: 1.5;
+  background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 #root {
@@ -94,35 +24,7 @@ body {
   flex-direction: column;
 }
 
-/* ==================== TYPOGRAPHY ==================== */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: var(--font-weight-bold);
-  line-height: 1.2;
-}
-
-h1 {
-  font-size: var(--font-size-3xl);
-}
-
-h2 {
-  font-size: var(--font-size-2xl);
-}
-
-h3 {
-  font-size: var(--font-size-xl);
-}
-
-p {
-  line-height: 1.6;
-}
-
-/* ==================== UTILITY CLASSES ==================== */
-.container {
-  max-width: var(--max-width-mobile);
-  margin: 0 auto;
-  padding: 0 var(--spacing-md);
-}
-
+/* Custom Glassmorphism Classes that combine Tailwind utilities with custom CSS */
 .glass {
   background: var(--color-glass-bg);
   backdrop-filter: blur(var(--blur-md));
@@ -137,92 +39,26 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Fallback for browsers that don't support backdrop-filter */
-@supports not (backdrop-filter: blur(20px)) {
-  .glass {
-    background: rgba(0, 0, 0, 0.85);
-  }
-  
-  .glass-strong {
-    background: rgba(0, 0, 0, 0.9);
-  }
+/* Mobile Container */
+.container-mobile {
+  max-width: 430px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100vh;
+  background: black;
+  /* Ensure base background is black for overlays */
 }
 
-.text-center {
-  text-align: center;
-}
-
-.flex {
-  display: flex;
-}
-
-.flex-col {
-  flex-direction: column;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.gap-sm {
-  gap: var(--spacing-sm);
-}
-
-.gap-md {
-  gap: var(--spacing-md);
-}
-
-.gap-lg {
-  gap: var(--spacing-lg);
-}
-
-/* ==================== ANIMATIONS ==================== */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.fade-in {
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-.slide-up {
-  animation: slideUp 0.4s ease-out;
-}
-
-/* ==================== SCROLLBAR ==================== */
+/* Scrollbar styling */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
 }
