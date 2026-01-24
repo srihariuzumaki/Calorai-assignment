@@ -236,8 +236,8 @@ const SwipeScreen = () => {
                     className="flex flex-col items-center gap-2 transition-transform active:scale-95"
                 >
                     <div className="w-12 h-12 rounded-full bg-gradient-to-b from-[#7843FF] to-[#4CC6FF] flex items-center justify-center shadow-lg">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ filter: 'drop-shadow(0 0 3px rgba(0,145,255,0.8))' }}>
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#0091FF" />
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ filter: 'drop-shadow(0 0 3px rgba(255,255,255,0.8))' }}>
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="white" />
                         </svg>
                     </div>
                     <span className="text-[10px] text-gray-500 font-medium">Super Like</span>
