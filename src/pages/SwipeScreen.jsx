@@ -105,6 +105,7 @@ const SwipeScreen = () => {
     const navigate = useNavigate();
     const [cards, setCards] = useState(foodsData);
     const [swipedCount, setSwipedCount] = useState(0);
+    const [swipeHistory, setSwipeHistory] = useState([]);
     const [preferences, setPreferences] = useState(() => {
         // Load from localStorage on mount
         const saved = localStorage.getItem('tastePreferences');
@@ -122,6 +123,9 @@ const SwipeScreen = () => {
 
         const card = cards.find(c => c.id === cardId);
         if (card) {
+            // Add to history for undo
+            setSwipeHistory(prev => [...prev, { card, direction, timestamp: Date.now() }]);
+
             setPreferences(prev => {
                 const newPrefs = { ...prev };
                 if (direction === 'right' || direction === 'super') {
@@ -146,6 +150,39 @@ const SwipeScreen = () => {
         setTimeout(() => {
             setCards(current => current.filter(c => c.id !== cardId));
         }, 200); // Wait for animation start to avoid flicker
+    };
+
+    const handleUndo = () => {
+        if (swipeHistory.length === 0) return;
+
+        const lastSwipe = swipeHistory[swipeHistory.length - 1];
+        const { card, direction } = lastSwipe;
+
+        // Remove from history
+        setSwipeHistory(prev => prev.slice(0, -1));
+
+        // Restore card to stack
+        setCards(prev => [card, ...prev]);
+
+        // Remove from preferences
+        setPreferences(prev => {
+            const newPrefs = { ...prev };
+            if (direction === 'right' || direction === 'super') {
+                newPrefs.loved = prev.loved.filter(f => f.id !== card.id);
+                if (direction === 'super') {
+                    newPrefs.superLiked = prev.superLiked.filter(f => f.id !== card.id);
+                }
+            } else if (direction === 'left') {
+                newPrefs.hated = prev.hated.filter(f => f.id !== card.id);
+            } else if (direction === 'unsure') {
+                newPrefs.unsure = prev.unsure.filter(f => f.id !== card.id);
+            }
+            localStorage.setItem('tastePreferences', JSON.stringify(newPrefs));
+            return newPrefs;
+        });
+
+        // Decrease swipe count
+        setSwipedCount(prev => prev - 1);
     };
 
     const handleButtonSwipe = (direction) => {
@@ -177,8 +214,23 @@ const SwipeScreen = () => {
                 <div className="w-10"></div> {/* Spacer for center alignment */}
             </div>
 
-            {/* Progress */}
-            <div className="px-6 mb-6">
+            {/* Progress Bar */}
+            <div className="px-6 mb-4">
+                <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm text-gray-400">{swipedCount} / {totalCards}</span>
+                    {swipeHistory.length > 0 && (
+                        <button
+                            onClick={handleUndo}
+                            className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 transition-all duration-200 active:scale-95"
+                        >
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 7v6h6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                <path d="M21 17a9 9 0 00-9-9 9 9 0 00-6 2.3L3 13" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                            <span className="text-xs text-white font-medium">Undo</span>
+                        </button>
+                    )}
+                </div>
                 <ProgressBar current={swipedCount} total={totalCards} />
             </div>
 
