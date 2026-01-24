@@ -190,27 +190,40 @@ const ResultsScreen = () => {
                     }}
                 >
                     {sections.map((section, sectionIndex) => (
-                        <div key={sectionIndex} className="min-w-full snap-center">
-                            <GlassCard className="p-6 bg-black/40 h-[400px] flex flex-col">
+                        <div
+                            key={sectionIndex}
+                            className="min-w-full snap-center"
+                            style={{
+                                opacity: currentSection === sectionIndex ? 1 : 0.7,
+                                transform: currentSection === sectionIndex ? 'scale(1)' : 'scale(0.95)',
+                                transition: 'opacity 0.4s ease-in-out, transform 0.4s ease-in-out'
+                            }}
+                        >
+                            <div className="p-6 h-[400px] flex flex-col rounded-3xl glass-strong border border-white/10 shadow-2xl">
                                 <div className="flex items-center gap-2 mb-2">
-                                    <span className={section.color}>{section.icon}</span>
+                                    <span className={`${section.color} text-2xl`}>{section.icon}</span>
                                     <h2 className="text-lg font-semibold text-white">{section.title}</h2>
                                 </div>
                                 <p className="text-xs text-gray-400 mb-4">{section.subtitle}</p>
 
-                                <div className="flex-1 overflow-y-auto space-y-2">
+                                <div className="flex-1 overflow-y-auto space-y-2 pr-2">
                                     {section.items.length > 0 ? (
                                         section.items.map((item, index) => (
-                                            <div key={index} className="flex items-center gap-2">
+                                            <div
+                                                key={index}
+                                                className="flex items-center gap-3"
+                                            >
                                                 <div className="w-2 h-2 rounded-full bg-blue-500 flex-shrink-0"></div>
                                                 <span className="text-sm text-white">{item.name}</span>
                                             </div>
                                         ))
                                     ) : (
-                                        <p className="text-sm text-gray-500">No items yet</p>
+                                        <div className="flex items-center justify-center h-full">
+                                            <p className="text-sm text-gray-500">No items yet</p>
+                                        </div>
                                     )}
                                 </div>
-                            </GlassCard>
+                            </div>
                         </div>
                     ))}
                 </div>
