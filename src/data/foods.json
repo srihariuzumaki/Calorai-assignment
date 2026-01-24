@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1,
+        "name": "Avocado Toast",
+        "category": "Breakfast",
+        "image": "🥑"
+    },
+    {
+        "id": 2,
+        "name": "Caesar Salad",
+        "category": "Salads",
+        "image": "🥗"
+    },
+    {
+        "id": 3,
+        "name": "Margherita Pizza",
+        "category": "Italian",
+        "image": "🍕"
+    },
+    {
+        "id": 4,
+        "name": "Sushi Roll",
+        "category": "Japanese",
+        "image": "🍣"
+    },
+    {
+        "id": 5,
+        "name": "Chicken Tacos",
+        "category": "Mexican",
+        "image": "🌮"
+    },
+    {
+        "id": 6,
+        "name": "Beef Burger",
+        "category": "American",
+        "image": "🍔"
+    },
+    {
+        "id": 7,
+        "name": "Pad Thai",
+        "category": "Thai",
+        "image": "🍜"
+    },
+    {
+        "id": 8,
+        "name": "Greek Salad",
+        "category": "Salads",
+        "image": "🥗"
+    },
+    {
+        "id": 9,
+        "name": "Chocolate Cake",
+        "category": "Desserts",
+        "image": "🍰"
+    },
+    {
+        "id": 10,
+        "name": "Grilled Salmon",
+        "category": "Seafood",
+        "image": "🐟"
+    },
+    {
+        "id": 11,
+        "name": "Pasta Carbonara",
+        "category": "Italian",
+        "image": "🍝"
+    },
+    {
+        "id": 12,
+        "name": "Chicken Wings",
+        "category": "American",
+        "image": "🍗"
+    },
+    {
+        "id": 13,
+        "name": "Veggie Wrap",
+        "category": "Healthy",
+        "image": "🌯"
+    },
+    {
+        "id": 14,
+        "name": "Ramen Bowl",
+        "category": "Japanese",
+        "image": "🍜"
+    },
+    {
+        "id": 15,
+        "name": "Fruit Smoothie",
+        "category": "Beverages",
+        "image": "🥤"
+    },
+    {
+        "id": 16,
+        "name": "Steak",
+        "category": "American",
+        "image": "🥩"
+    },
+    {
+        "id": 17,
+        "name": "Falafel Wrap",
+        "category": "Mediterranean",
+        "image": "🥙"
+    },
+    {
+        "id": 18,
+        "name": "Ice Cream",
+        "category": "Desserts",
+        "image": "🍦"
+    },
+    {
+        "id": 19,
+        "name": "Pancakes",
+        "category": "Breakfast",
+        "image": "🥞"
+    },
+    {
+        "id": 20,
+        "name": "Fried Rice",
+        "category": "Asian",
+        "image": "🍚"
+    },
+    {
+        "id": 21,
+        "name": "Croissant",
+        "category": "Breakfast",
+        "image": "🥐"
+    },
+    {
+        "id": 22,
+        "name": "Burrito",
+        "category": "Mexican",
+        "image": "🌯"
+    },
+    {
+        "id": 23,
+        "name": "Donuts",
+        "category": "Desserts",
+        "image": "🍩"
+    },
+    {
+        "id": 24,
+        "name": "Lobster",
+        "category": "Seafood",
+        "image": "🦞"
+    },
+    {
+        "id": 25,
+        "name": "Pho",
+        "category": "Vietnamese",
+        "image": "🍲"
+    },
+    {
+        "id": 26,
+        "name": "BBQ Ribs",
+        "category": "American",
+        "image": "🍖"
+    },
+    {
+        "id": 27,
+        "name": "Quinoa Bowl",
+        "category": "Healthy",
+        "image": "🥗"
+    },
+    {
+        "id": 28,
+        "name": "Tiramisu",
+        "category": "Desserts",
+        "image": "🍰"
+    },
+    {
+        "id": 29,
+        "name": "Dim Sum",
+        "category": "Chinese",
+        "image": "🥟"
+    },
+    {
+        "id": 30,
+        "name": "Nachos",
+        "category": "Mexican",
+        "image": "🧀"
+    }
+]
