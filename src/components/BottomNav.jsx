@@ -75,8 +75,8 @@ const BottomNav = () => {
     };
 
     return (
-        <div className="fixed bottom-0 left-0 right-0 z-50 px-4 pb-4 pt-2">
-            <div className="flex items-center justify-between gap-4 mx-auto max-w-[420px]">
+        <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] z-50 px-4 pb-4 pt-2">
+            <div className="flex items-center justify-between gap-4">
                 {/* Main Nav Capsule - 3 buttons */}
                 <div className="glass-strong rounded-full h-[70px] flex items-center flex-1 bg-black/60 border-white/10 relative overflow-hidden">
                     {/* Animated background pill - centered perfectly */}

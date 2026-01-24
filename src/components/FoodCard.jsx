@@ -14,10 +14,18 @@ const FoodCard = ({ food, style = {} }) => {
                 {/* Content */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
                     {/* Food Image/Emoji */}
-                    <div className="mb-6 bg-white/90 rounded-full p-6 shadow-xl">
-                        <span className="text-6xl filter drop-shadow-lg">
-                            {food.image}
-                        </span>
+                    <div className="mb-6 bg-white/90 rounded-full h-32 w-32 flex items-center justify-center shadow-xl overflow-hidden">
+                        {food.image.startsWith('http') ? (
+                            <img
+                                src={food.image}
+                                alt={food.name}
+                                className="w-full h-full object-cover"
+                            />
+                        ) : (
+                            <span className="text-6xl filter drop-shadow-lg">
+                                {food.image}
+                            </span>
+                        )}
                     </div>
 
                     {/* Text */}

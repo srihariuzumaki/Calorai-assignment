@@ -149,8 +149,12 @@ const ResultsScreen = () => {
                 <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
                     {preferences.loved.map((food, index) => (
                         <div key={index} className="flex flex-col items-center min-w-[80px] snap-start">
-                            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center text-3xl mb-2 border border-white/10">
-                                {food.image}
+                            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center overflow-hidden text-3xl mb-2 border border-white/10">
+                                {food.image.startsWith('http') ? (
+                                    <img src={food.image} alt={food.name} className="w-full h-full object-cover" />
+                                ) : (
+                                    food.image
+                                )}
                             </div>
                             <span className="text-xs text-gray-300 text-center">{food.category}</span>
                         </div>

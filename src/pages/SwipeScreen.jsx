@@ -5,7 +5,8 @@ import Button from '../components/Button';
 import BottomNav from '../components/BottomNav';
 import ProgressBar from '../components/ProgressBar';
 import FoodCard from '../components/FoodCard';
-import foodsData from '../data/foods.json';
+import foodsDataRaw from '../data/foods.json';
+const foodsData = foodsDataRaw.foods;
 
 const SwipeCard = ({ food, onSwipe, style, ...props }) => {
     const x = useMotionValue(0);

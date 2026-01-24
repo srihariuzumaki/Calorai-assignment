@@ -1,5 +1,8 @@
 # 😋 CalorAI Taste Profile
 
+> [!TIP]
+> **Optimal Experience:** For the most authentic iOS-style experience, it is recommended to view this application using the **Mobile Device Emulator** (e.g., iPhone 16 Pro Max mode) in your browser's developer console.
+
 A premium, interactive food preference discovery application built for the CalorAI Developer Test. This app allows users to build a personal taste profile through an intuitive swipe interface and discover tailored meal recommendations and detailed recipes.
 
 ---
@@ -9,6 +12,7 @@ A premium, interactive food preference discovery application built for the Calor
 ### 🛠️ Core Functionality (Must-Have)
 - **Glassmorphism Intro Screen:** A high-end welcome screen featuring advanced CSS backdrop filters and smooth page transitions.
 - **Tinder-Style Swipe Interface:** Fluid interaction logic for 30 diverse food items with dynamic progress tracking.
+- **Persistence (Local Storage):** Your progress and taste profile are automatically saved to your browser, allowing you to leave and return without losing your data.
 - **Taste Profile Results:** A comprehensive breakdown of user preferences, including health scores and trait analysis.
 - **iOS-Style Navigation:** A frosted glass bottom tab bar with liquid-motion active state indicators.
 - **Smart Result Sections:** Organized "Loved", "Hated", and "Super Liked" sections with interactive horizontal scrolling.

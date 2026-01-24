@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import foodsData from '../data/foods.json';
+import foodsDataRaw from '../data/foods.json';
 import GlassCard from '../components/GlassCard';
 import BottomNav from '../components/BottomNav';
 import { motion, AnimatePresence } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
+
+const foodsData = foodsDataRaw.foods;
 
 const SearchScreen = () => {
     const navigate = useNavigate();
@@ -51,8 +53,14 @@ const SearchScreen = () => {
                             onClick={() => handleFoodClick(food)}
                             className="text-left h-full"
                         >
-                            <GlassCard className="p-4 h-full flex flex-col items-center text-center bg-black/40 border-white/10 hover:border-primary/30 transition-colors">
-                                <div className="text-4xl mb-3 transform transition-transform group-hover:scale-110">{food.image}</div>
+                            <GlassCard className="p-4 h-full flex flex-col items-center text-center bg-black/40 border-white/10 hover:border-primary/30 transition-colors overflow-hidden">
+                                <div className="h-16 w-16 mb-3 rounded-full bg-white/10 flex items-center justify-center overflow-hidden">
+                                    {food.image.startsWith('http') ? (
+                                        <img src={food.image} alt={food.name} className="w-full h-full object-cover" />
+                                    ) : (
+                                        <span className="text-3xl">{food.image}</span>
+                                    )}
+                                </div>
                                 <h3 className="text-sm font-bold text-white mb-1 leading-tight">{food.name}</h3>
                                 <div className="mt-auto">
                                     <span className="text-[10px] text-primary bg-primary/10 px-2 py-0.5 rounded-full font-medium">
@@ -99,13 +107,17 @@ const SearchScreen = () => {
                                 </button>
 
                                 {/* Modal Header Banner */}
-                                <div className="relative h-32 bg-gradient-to-br from-primary/20 via-black to-black border-b border-white/10 overflow-hidden">
-                                    <div className="absolute inset-0 flex items-center justify-center">
-                                        <div className="relative">
-                                            <div className="absolute inset-0 bg-primary blur-3xl opacity-20 scale-150"></div>
-                                            <span className="text-7xl relative z-10 select-none">{selectedFood.image}</span>
+                                <div className="relative h-40 bg-gradient-to-br from-primary/20 via-black to-black border-b border-white/10 overflow-hidden">
+                                    {selectedFood.image.startsWith('http') ? (
+                                        <img src={selectedFood.image} alt={selectedFood.name} className="w-full h-full object-cover opacity-60" />
+                                    ) : (
+                                        <div className="absolute inset-0 flex items-center justify-center">
+                                            <div className="relative">
+                                                <div className="absolute inset-0 bg-primary blur-3xl opacity-20 scale-150"></div>
+                                                <span className="text-7xl relative z-10 select-none">{selectedFood.image}</span>
+                                            </div>
                                         </div>
-                                    </div>
+                                    )}
                                 </div>
 
                                 {/* Title Area */}
