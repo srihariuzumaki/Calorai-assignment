@@ -123,10 +123,20 @@ const ResultsScreen = () => {
 
     return (
         <div className="min-h-screen flex flex-col relative pb-[80px]">
-            {/* Header */}
-            <div className="pt-8 px-6 mb-4">
-                <h1 className="text-2xl font-bold text-white">Your Taste Profile</h1>
-                <p className="text-sm text-gray-400 mt-1">Tailored to your unique needs. We'll use this for recommendations and menu plans</p>
+            {/* Header with Back Button */}
+            <div className="pt-6 px-6 mb-4">
+                <div className="flex items-center gap-3 mb-4">
+                    <button
+                        onClick={() => window.history.back()}
+                        className="p-2 rounded-full glass hover:bg-white/10 transition-colors"
+                    >
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M15 18l-6-6 6-6" />
+                        </svg>
+                    </button>
+                    <h1 className="text-2xl font-bold text-white">Your Taste Profile</h1>
+                </div>
+                <p className="text-sm text-gray-400">Tailored to your unique needs. We'll use this for recommendations and menu plans</p>
             </div>
 
             {/* Key Highlights - Swipeable */}

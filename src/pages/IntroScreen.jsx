@@ -8,9 +8,9 @@ const IntroScreen = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center relative pb-[90px]">
+        <div className="min-h-screen flex flex-col relative pb-24">
             {/* Back Button */}
-            <div className="pt-4 px-4">
+            <div className="pt-4 px-4 absolute top-0 left-0 z-10">
                 <button className="p-3 rounded-full glass hover:bg-white/10 transition-colors">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M15 18l-6-6 6-6" />
@@ -18,14 +18,7 @@ const IntroScreen = () => {
                 </button>
             </div>
 
-            {/* Title */}
-            <div className="px-6 mt-2 mb-6">
-                <h1 className="text-2xl font-bold text-white leading-tight">
-                    Design Your Food Plan
-                </h1>
-            </div>
-
-            {/* Main Card */}
+            {/* Main Content - Centered */}
             <div className="flex-1 px-4 flex items-center justify-center">
                 <GlassCard strong className="w-full max-w-sm p-8 flex flex-col items-center text-center space-y-6 bg-black/40 border-white/10">
 
@@ -44,7 +37,7 @@ const IntroScreen = () => {
 
                     {/* Description */}
                     <p className="text-gray-300 text-sm leading-relaxed">
-                        Swipe right on foods you love, left on foods you don't.
+                        Swipe through foods you love, left on foods you don't.
                     </p>
 
                     {/* Additional Info */}
@@ -65,6 +58,7 @@ const IntroScreen = () => {
                     <p className="text-gray-500 text-xs">
                         Takes about 2 minutes.
                     </p>
+
                 </GlassCard>
             </div>
 
