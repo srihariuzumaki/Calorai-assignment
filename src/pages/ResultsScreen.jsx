@@ -57,6 +57,7 @@ const ResultsScreen = () => {
 
     const handleTouchStart = (e) => {
         setTouchStart(e.targetTouches[0].clientX);
+        setTouchEnd(0); // Reset touch end
     };
 
     const handleTouchMove = (e) => {
@@ -67,17 +68,16 @@ const ResultsScreen = () => {
         if (!touchStart || !touchEnd) return;
 
         const distance = touchStart - touchEnd;
-        const isLeftSwipe = distance > 50;
-        const isRightSwipe = distance < -50;
+        const isLeftSwipe = distance > 75; // Increased threshold for better control
+        const isRightSwipe = distance < -75;
 
         if (isLeftSwipe && currentSection < sections.length - 1) {
             scrollToSection(currentSection + 1);
-        }
-
-        if (isRightSwipe && currentSection > 0) {
+        } else if (isRightSwipe && currentSection > 0) {
             scrollToSection(currentSection - 1);
         }
 
+        // Reset
         setTouchStart(0);
         setTouchEnd(0);
     };
@@ -90,7 +90,7 @@ const ResultsScreen = () => {
             const distance = Math.abs(targetScroll - currentScroll);
 
             // Calculate duration based on distance (slower for longer distances)
-            const duration = Math.min(600, 300 + distance * 0.5);
+            const duration = Math.min(800, 400 + distance * 0.8); // Increased duration for smoother feel
 
             const startTime = performance.now();
             const startScroll = currentScroll;
@@ -105,7 +105,10 @@ const ResultsScreen = () => {
                     : 1 - Math.pow(-2 * progress + 2, 2) / 2;
 
                 const newScroll = startScroll + (targetScroll - startScroll) * easeInOut;
-                scrollContainerRef.current.scrollLeft = newScroll;
+
+                if (scrollContainerRef.current) {
+                    scrollContainerRef.current.scrollLeft = newScroll;
+                }
 
                 if (progress < 1) {
                     requestAnimationFrame(animateScroll);
