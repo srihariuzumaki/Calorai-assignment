@@ -105,10 +105,41 @@ const SwipeScreen = () => {
     const navigate = useNavigate();
     const [cards, setCards] = useState(foodsData);
     const [swipedCount, setSwipedCount] = useState(0);
+    const [preferences, setPreferences] = useState(() => {
+        // Load from localStorage on mount
+        const saved = localStorage.getItem('tastePreferences');
+        return saved ? JSON.parse(saved) : {
+            loved: [],
+            hated: [],
+            superLiked: [],
+            unsure: []
+        };
+    });
     const totalCards = foodsData.length;
 
     const handleSwipe = (direction, cardId) => {
         console.log(`Swiped ${direction} on card ${cardId}`);
+
+        const card = cards.find(c => c.id === cardId);
+        if (card) {
+            setPreferences(prev => {
+                const newPrefs = { ...prev };
+                if (direction === 'right' || direction === 'super') {
+                    newPrefs.loved = [...prev.loved, card];
+                    if (direction === 'super') {
+                        newPrefs.superLiked = [...prev.superLiked, card];
+                    }
+                } else if (direction === 'left') {
+                    newPrefs.hated = [...prev.hated, card];
+                } else if (direction === 'unsure') {
+                    newPrefs.unsure = [...prev.unsure, card];
+                }
+                // Save to localStorage immediately
+                localStorage.setItem('tastePreferences', JSON.stringify(newPrefs));
+                return newPrefs;
+            });
+        }
+
         setSwipedCount(prev => prev + 1);
 
         // Remove card from stack

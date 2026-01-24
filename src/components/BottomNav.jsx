@@ -14,8 +14,8 @@ const BottomNav = () => {
         >
             {/* Icon Circle */}
             <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all ${active
-                    ? 'bg-[#121212]'
-                    : 'bg-transparent'
+                ? 'bg-[#121212]'
+                : 'bg-transparent'
                 }`}>
                 <div className={`transition-colors ${active ? 'text-primary' : 'text-gray-400'}`}>
                     {icon}
@@ -31,8 +31,8 @@ const BottomNav = () => {
     );
 
     return (
-        <div className="fixed bottom-0 left-0 right-0 z-50 px-4 pb-6 pt-2">
-            <div className="glass-strong rounded-full h-[90px] flex items-center justify-around px-4 mx-auto max-w-[420px] bg-black/60 border-white/10">
+        <div className="fixed bottom-0 left-0 right-0 z-50 px-4 pb-4 pt-2">
+            <div className="glass-strong rounded-full h-[70px] flex items-center justify-around px-4 mx-auto max-w-[420px] bg-black/60 border-white/10">
 
                 {/* Start Tab */}
                 <NavButton
