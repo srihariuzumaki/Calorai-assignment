@@ -8,7 +8,7 @@ const IntroScreen = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="min-h-screen flex flex-col relative pb-24 bg-gradient-to-b from-black via-gray-900 to-black">
+        <div className="min-h-screen flex flex-col items-center justify-center relative pb-[90px]">
             {/* Back Button */}
             <div className="pt-4 px-4">
                 <button className="p-3 rounded-full glass hover:bg-white/10 transition-colors">

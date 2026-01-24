@@ -122,7 +122,7 @@ const ResultsScreen = () => {
     };
 
     return (
-        <div className="min-h-screen flex flex-col relative pb-[80px] bg-gradient-to-b from-black via-gray-900 to-black">
+        <div className="min-h-screen flex flex-col relative pb-[80px]">
             {/* Header */}
             <div className="pt-8 px-6 mb-4">
                 <h1 className="text-2xl font-bold text-white">Your Taste Profile</h1>
