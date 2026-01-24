@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 const BottomNav = () => {
@@ -11,19 +11,35 @@ const BottomNav = () => {
         { path: '/results', label: 'Taste Profile', icon: 'carrot' }
     ];
 
-    // Find the index of the active main nav item
-    const activeIndex = mainNavItems.findIndex(item => {
-        if (item.path === '/') {
-            return location.pathname === '/' || location.pathname === '/swipe';
-        }
-        return location.pathname === item.path;
-    });
+    // Find the index of the active main nav item based on route
+    const getActiveIndex = () => {
+        return mainNavItems.findIndex(item => {
+            if (item.path === '/') {
+                return location.pathname === '/' || location.pathname === '/swipe';
+            }
+            return location.pathname === item.path;
+        });
+    };
+
+    const [activeIndex, setActiveIndex] = useState(getActiveIndex());
+    const [pillPosition, setPillPosition] = useState(getActiveIndex());
+
+    // Update active index when route changes
+    useEffect(() => {
+        setActiveIndex(getActiveIndex());
+    }, [location.pathname]);
 
     const isSearchActive = location.pathname === '/search';
 
     const NavButton = ({ item, index, isActive }) => {
         const handleClick = () => {
-            navigate(item.path);
+            // Immediately move the pill
+            setPillPosition(index);
+
+            // Navigate after animation has time to start
+            setTimeout(() => {
+                navigate(item.path);
+            }, 300);
         };
 
         return (
@@ -63,13 +79,13 @@ const BottomNav = () => {
             <div className="flex items-center justify-between gap-4 mx-auto max-w-[420px]">
                 {/* Main Nav Capsule - 3 buttons */}
                 <div className="glass-strong rounded-full h-[70px] flex items-center px-2 flex-1 bg-black/60 border-white/10 relative overflow-hidden">
-                    {/* Animated background pill - slower animation */}
+                    {/* Animated background pill - controlled by pillPosition state */}
                     <div
                         className="absolute h-[56px] rounded-full bg-[#121212]"
                         style={{
                             width: 'calc(33.333% - 4px)',
-                            left: `calc(${activeIndex * 33.333}% + 6px)`,
-                            opacity: activeIndex >= 0 ? 1 : 0,
+                            left: `calc(${pillPosition * 33.333}% + 6px)`,
+                            opacity: pillPosition >= 0 ? 1 : 0,
                             transition: 'all 800ms cubic-bezier(0.4, 0, 0.2, 1)'
                         }}
                     />
