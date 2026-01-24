@@ -3,7 +3,7 @@
         {
             "id": 1,
             "name": "Grilled Salmon",
-            "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400",
+            "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=600",
             "category": "protein",
             "tags": [
                 "protein",
@@ -15,7 +15,7 @@
         {
             "id": 2,
             "name": "Chicken Breast",
-            "image": "https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=400",
+            "image": "https://images.unsplash.com/photo-1604503468506-a8da13d82791?auto=format&fit=crop&q=80&w=600",
             "category": "protein",
             "tags": [
                 "protein",
@@ -27,7 +27,7 @@
         {
             "id": 3,
             "name": "Steak",
-            "image": "https://images.unsplash.com/photo-1600891964092-4316c288032e?w=400",
+            "image": "https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&q=80&w=600",
             "category": "protein",
             "tags": [
                 "protein",
@@ -39,7 +39,7 @@
         {
             "id": 4,
             "name": "Tofu",
-            "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400",
+            "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=600",
             "category": "protein",
             "tags": [
                 "protein",
@@ -51,7 +51,7 @@
         {
             "id": 5,
             "name": "Eggs",
-            "image": "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=400",
+            "image": "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?auto=format&fit=crop&q=80&w=600",
             "category": "protein",
             "tags": [
                 "protein",
@@ -63,7 +63,7 @@
         {
             "id": 6,
             "name": "Shrimp",
-            "image": "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?w=400",
+            "image": "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&q=80&w=600",
             "category": "protein",
             "tags": [
                 "protein",
@@ -75,7 +75,7 @@
         {
             "id": 7,
             "name": "White Rice",
-            "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400",
+            "image": "https://images.unsplash.com/photo-1516684732162-798a0062be99?auto=format&fit=crop&q=80&w=600",
             "category": "carb",
             "tags": [
                 "carb",
@@ -87,7 +87,7 @@
         {
             "id": 8,
             "name": "Pasta",
-            "image": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=400",
+            "image": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&q=80&w=600",
             "category": "carb",
             "tags": [
                 "carb",
@@ -99,7 +99,7 @@
         {
             "id": 9,
             "name": "Potatoes",
-            "image": "https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=400",
+            "image": "https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&q=80&w=600",
             "category": "carb",
             "tags": [
                 "carb",
@@ -111,7 +111,7 @@
         {
             "id": 10,
             "name": "Quinoa",
-            "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400",
+            "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&q=80&w=600",
             "category": "carb",
             "tags": [
                 "carb",
@@ -123,7 +123,7 @@
         {
             "id": 11,
             "name": "Oatmeal",
-            "image": "https://images.unsplash.com/photo-1517673132405-a56a62b18caf?w=400",
+            "image": "https://images.unsplash.com/photo-1517673132405-a56a62b18caf?auto=format&fit=crop&q=80&w=600",
             "category": "carb",
             "tags": [
                 "carb",
@@ -135,7 +135,7 @@
         {
             "id": 12,
             "name": "Bread",
-            "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400",
+            "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=600",
             "category": "carb",
             "tags": [
                 "carb",
@@ -147,7 +147,7 @@
         {
             "id": 13,
             "name": "Broccoli",
-            "image": "https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?w=400",
+            "image": "https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?auto=format&fit=crop&q=80&w=600",
             "category": "vegetable",
             "tags": [
                 "vegetable",
@@ -159,7 +159,7 @@
         {
             "id": 14,
             "name": "Spinach",
-            "image": "https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=400",
+            "image": "https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&q=80&w=600",
             "category": "vegetable",
             "tags": [
                 "vegetable",
@@ -171,7 +171,7 @@
         {
             "id": 15,
             "name": "Kale",
-            "image": "https://images.unsplash.com/photo-1557844352-761f2565b576?w=400",
+            "image": "https://images.unsplash.com/photo-1557844352-761f2565b576?auto=format&fit=crop&q=80&w=600",
             "category": "vegetable",
             "tags": [
                 "vegetable",
@@ -183,19 +183,19 @@
         {
             "id": 16,
             "name": "Carrots",
-            "image": "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?w=400",
+            "image": "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?auto=format&fit=crop&q=80&w=600",
             "category": "vegetable",
             "tags": [
                 "vegetable",
                 "orange",
                 "sweet"
             ],
-            "recipe": "### Ingredients\n- 1 lb whole carrots, peeled\n- 1 tbsp honey\n- 1 tbsp olive oil\n- 1/2 tsp cumin, salt and pepper\n\n### Instructions\n1. **Prep:** Cut large carrots in half lengthwise so they cook evenly.\n2. **Glaze:** Whisk honey, oil, and cumin in a bowl. Toss with carrots until coated.\n3. **Roast:** Arrange on a baking sheet. Roast at 400°F (200°C) for 20-25 minutes until tender and caramelized.\n4. **Garnish:** Sprinkle with fresh parsley.\n5. **Serve:** A beautiful and healthy side dish for any roast dinner."
+            "recipe": "### Ingredients\n- 1 lb whole carrots, peeled\n- 1 tbsp honey\n- 1 tbsp olive oil\n- 1/2 tsp cumin, salt and pepper\n\n### Instructions\n1. **Prep:** Cut large carrots in half lengthwise so they cook evenly.\n2. **Glaze:** Whisk honey, oil, and cumin in a bowl. Toss with carrots until coated.\n3. **Roast:** Arrange on a baking sheet. Roast at 400°F (200°C) for 20-25 minutes until tender and caramelized.\n4. **Garnish:** Sprinkle with fresh parsley.\n5. **Serve:** A beautiful and healthy side dish for any meal."
         },
         {
             "id": 17,
             "name": "Bell Peppers",
-            "image": "https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?w=400",
+            "image": "https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?auto=format&fit=crop&q=80&w=600",
             "category": "vegetable",
             "tags": [
                 "vegetable",
@@ -207,7 +207,7 @@
         {
             "id": 18,
             "name": "Avocado",
-            "image": "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=400",
+            "image": "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?auto=format&fit=crop&q=80&w=600",
             "category": "vegetable",
             "tags": [
                 "vegetable",
@@ -219,7 +219,7 @@
         {
             "id": 19,
             "name": "Sweet Potato",
-            "image": "https://images.unsplash.com/photo-1591708683044-a7b0a0146a46?w=400",
+            "image": "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&q=80&w=600",
             "category": "vegetable",
             "tags": [
                 "vegetable",
@@ -231,7 +231,7 @@
         {
             "id": 20,
             "name": "Cheese",
-            "image": "https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=400",
+            "image": "https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?auto=format&fit=crop&q=80&w=600",
             "category": "other",
             "tags": [
                 "dairy",
@@ -243,7 +243,7 @@
         {
             "id": 21,
             "name": "Greek Yogurt",
-            "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400",
+            "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&q=80&w=600",
             "category": "other",
             "tags": [
                 "dairy",
@@ -255,7 +255,7 @@
         {
             "id": 22,
             "name": "Nuts",
-            "image": "https://images.unsplash.com/photo-1508747703725-719777637510?w=400",
+            "image": "https://images.unsplash.com/photo-1508747703725-719777637510?auto=format&fit=crop&q=80&w=600",
             "category": "other",
             "tags": [
                 "snack",
@@ -267,19 +267,19 @@
         {
             "id": 23,
             "name": "Black Beans",
-            "image": "https://images.unsplash.com/photo-1566843536060-5a71cd7e8c9e?w=400",
+            "image": "https://images.unsplash.com/photo-1566843536060-5a71cd7e8c9e?auto=format&fit=crop&q=80&w=600",
             "category": "other",
             "tags": [
                 "legume",
                 "protein",
                 "fiber"
             ],
-            "recipe": "### Ingredients\n- 1 can (15 oz) black beans, rinsed and drained\n- 1/2 onion, finely chopped\n- 1 clove garlic, minced\n- 1/2 tsp cumin, 1/2 tsp oregano\n- Splash of vegetable broth or water\n\n### Instructions\n1. **Sauté:** Cook onion and garlic in a bit of oil until softened.\n2. **Simmer:** Add beans, spices, and liquid. Bring to a simmer.\n3. **Mash:** Use a spoon to mash a few beans—this creates a creamy texture.\n4. **Flavor:** Add a squeeze of lime at the end for fresh acidity.\n5. **Serve:** Great as a side or in tacos, burritos, and salads."
+            "recipe": "### Ingredients\n- 1 can (15 oz) black beans, rinsed and drained\n- 1/2 onion, finely chopped\n- 1 clove garlic, minced\n- 1/2 tsp cumin, 1/2 tsp oregano\n- Splash of vegetable broth or water\n\n### Instructions\n1. **Sauté:** Cook onion and garlic in a bit of oil until softened.\n2. **Simmer:** Add beans, spices, and liquid. Bring to a single boil.\n3. **Mash:** Use a spoon to mash a few beans—this creates a creamy texture.\n4. **Flavor:** Add a squeeze of lime at the end for fresh acidity.\n5. **Serve:** Great as a side or in tacos, burritos, and salads."
         },
         {
             "id": 24,
             "name": "Sushi",
-            "image": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400",
+            "image": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?auto=format&fit=crop&q=80&w=600",
             "category": "other",
             "tags": [
                 "japanese",
@@ -291,7 +291,7 @@
         {
             "id": 25,
             "name": "Pizza",
-            "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400",
+            "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=600",
             "category": "other",
             "tags": [
                 "italian",
@@ -303,7 +303,7 @@
         {
             "id": 26,
             "name": "Salad",
-            "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400",
+            "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=600",
             "category": "vegetable",
             "tags": [
                 "vegetable",
@@ -315,7 +315,7 @@
         {
             "id": 27,
             "name": "Burger",
-            "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400",
+            "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=600",
             "category": "other",
             "tags": [
                 "comfort",
@@ -327,7 +327,7 @@
         {
             "id": 28,
             "name": "Smoothie Bowl",
-            "image": "https://images.unsplash.com/photo-1590301157890-4810ed352733?w=400",
+            "image": "https://images.unsplash.com/photo-1590301157890-4810ed352733?auto=format&fit=crop&q=80&w=600",
             "category": "other",
             "tags": [
                 "healthy",
@@ -339,19 +339,19 @@
         {
             "id": 29,
             "name": "Tacos",
-            "image": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400",
+            "image": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&q=80&w=600",
             "category": "other",
             "tags": [
                 "mexican",
                 "protein",
                 "comfort"
             ],
-            "recipe": "### Ingredients\n- 1 lb chicken breast or thighs, cut into small cubes\n- 8 small corn or flour tortillas\n- Seasoning: 1 tsp cumin, 1 tsp chili powder, 1/2 tsp onion powder, 1/2 tsp garlic powder, salt and pepper\n- Toppings: Finely chopped white onion, fresh cilantro, crumbled cotija cheese, salsa verde, lime wedges\n- 1 tbsp vegetable oil\n\n### Instructions\n1. **Season the Chicken:** In a bowl, toss the chicken with the dry seasonings and oil until well coated.\n2. **Cook the Chicken:** Heat a large skillet over medium-high heat. Add the chicken and cook, stirring occasionally, for 6-8 minutes until golden and cooked through.\n3. **Warm the Tortillas:** Briefly heat the tortillas in a dry skillet or over an open flame until soft and slightly charred.\n4. **Assemble:** Place a generous spoonful of chicken in the center of each tortilla.\n5. **Garnish:** Top with onions, cilantro, cheese, and salsa. Serve immediately with lime wedges on the side for squeezing over the top."
+            "recipe": "### Ingredients\n- 1 lb chicken breast or thighs, cut into small cubes\n- 8 small corn or flour tortillas\n- Seasoning: 1 tsp cumin, 1 tsp chili powder, 1/2 tsp onion powder, 1/2 tsp garlic powder, salt and pepper\n- Toppings: Finely chopped white onion, fresh cilantro, crumbled cotija cheese, salsa verde, lime wedges\n- 1 tbsp vegetable oil\n\n### Instructions\n1. **Season the Chicken:** In a bowl, toss the chicken with the dry seasonings and oil until well coated.\n2. **Cook the Chicken:** Heat a large skillet over medium-high heat. Add the chicken and cook, stirring occasionally, for 6-8 minutes until golden and cooked through.\n3. **Warm the Tortillas:** Briefly heat the tortillas in a dry skillet or over an open flame until soft and slightly charred.\n4. **Assemble:** Place a generic spoonful of chicken in the center of each tortilla.\n5. **Garnish:** Top with onions, cilantro, cheese, and salsa. Serve immediately with lime wedges on the side for squeezing over the top."
         },
         {
             "id": 30,
             "name": "Ramen",
-            "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400",
+            "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&q=80&w=600",
             "category": "other",
             "tags": [
                 "japanese",

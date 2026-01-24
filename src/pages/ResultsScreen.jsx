@@ -7,8 +7,19 @@ import { generateRecommendations } from '../utils/mealRecommendations';
 const ResultsScreen = () => {
     const [currentSection, setCurrentSection] = useState(0);
     const scrollContainerRef = useRef(null);
+    const highlightsRef = useRef(null);
     const [touchStart, setTouchStart] = useState(0);
     const [touchEnd, setTouchEnd] = useState(0);
+
+    const scrollHighlights = (direction) => {
+        if (highlightsRef.current) {
+            const scrollAmount = 160;
+            highlightsRef.current.scrollBy({
+                left: direction === 'left' ? -scrollAmount : scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    };
 
     // Load preferences from localStorage
     const savedPreferences = localStorage.getItem('tastePreferences');
@@ -144,9 +155,14 @@ const ResultsScreen = () => {
             </div>
 
             {/* Key Highlights - Swipeable */}
-            <div className="px-6 mb-4">
+            <div className="px-6 mb-4 relative group">
                 <h2 className="text-sm font-semibold text-gray-400 mb-3">Key Highlights:</h2>
-                <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+
+                <div
+                    ref={highlightsRef}
+                    className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2 scrollbar-hide"
+                    style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                >
                     {preferences.loved.map((food, index) => (
                         <div key={index} className="flex flex-col items-center min-w-[80px] snap-start">
                             <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center overflow-hidden text-3xl mb-2 border border-white/10">
@@ -277,10 +293,32 @@ const ResultsScreen = () => {
             </div>
 
             {/* Swipeable Sections */}
-            <div className="flex-1 px-6 mb-4">
+            <div className="flex-1 px-6 mb-4 relative group">
+                {/* Section Navigation Arrows */}
+                {currentSection > 0 && (
+                    <button
+                        onClick={() => scrollToSection(currentSection - 1)}
+                        className="absolute left-3 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-white/20 backdrop-blur-2xl flex items-center justify-center shadow-2xl transition-all active:scale-90"
+                    >
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="mr-0.5">
+                            <path d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                )}
+                {currentSection < sections.length - 1 && (
+                    <button
+                        onClick={() => scrollToSection(currentSection + 1)}
+                        className="absolute right-3 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-white/20 backdrop-blur-2xl flex items-center justify-center shadow-2xl transition-all active:scale-90"
+                    >
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="ml-0.5">
+                            <path d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                )}
+
                 <div
                     ref={scrollContainerRef}
-                    className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4"
+                    className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide"
                     onScroll={handleScroll}
                     onTouchStart={handleTouchStart}
                     onTouchMove={handleTouchMove}
@@ -301,27 +339,28 @@ const ResultsScreen = () => {
                                 transition: 'opacity 0.4s ease-in-out, transform 0.4s ease-in-out'
                             }}
                         >
-                            <div className="p-6 h-[400px] flex flex-col rounded-3xl glass-strong border border-white/10 shadow-2xl">
+                            <div className="p-6 h-[400px] flex flex-col rounded-3xl glass-strong border border-white/10 shadow-2xl bg-black/40">
                                 <div className="flex items-center gap-2 mb-2">
                                     <span className={`${section.color} text-2xl`}>{section.icon}</span>
                                     <h2 className="text-lg font-semibold text-white">{section.title}</h2>
                                 </div>
                                 <p className="text-xs text-gray-400 mb-4">{section.subtitle}</p>
 
-                                <div className="flex-1 overflow-y-auto space-y-2 pr-2">
+                                <div className="flex-1 overflow-y-auto space-y-2 pr-2 scrollbar-hide">
                                     {section.items.length > 0 ? (
                                         section.items.map((item, index) => (
                                             <div
                                                 key={index}
-                                                className="flex items-center gap-3"
+                                                className="flex items-center gap-3 bg-white/5 p-2 rounded-xl border border-white/5"
                                             >
-                                                <div className="w-2 h-2 rounded-full bg-blue-500 flex-shrink-0"></div>
+                                                <div className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></div>
                                                 <span className="text-sm text-white">{item.name}</span>
+                                                <span className="ml-auto text-[10px] text-gray-500">{item.category}</span>
                                             </div>
                                         ))
                                     ) : (
                                         <div className="flex items-center justify-center h-full">
-                                            <p className="text-sm text-gray-500">No items yet</p>
+                                            <p className="text-sm text-gray-400">No items found</p>
                                         </div>
                                     )}
                                 </div>

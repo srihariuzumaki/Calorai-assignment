@@ -105,6 +105,22 @@ const SwipeCard = ({ food, onSwipe, style, ...props }) => {
 const SwipeScreen = () => {
     const navigate = useNavigate();
     const [cards, setCards] = useState(foodsData);
+    const [lastSwiped, setLastSwiped] = useState(null);
+
+    // Preload next images for smoother experience
+    useEffect(() => {
+        const preloadLimit = 5;
+        // Find visible indexes (simple heuristic)
+        const nextFoods = cards.slice(0, preloadLimit);
+
+        nextFoods.forEach(food => {
+            if (food.image && food.image.startsWith('http')) {
+                const img = new Image();
+                img.src = food.image;
+            }
+        });
+    }, [cards]);
+
     const [swipedCount, setSwipedCount] = useState(0);
     const [swipeHistory, setSwipeHistory] = useState([]);
     const [preferences, setPreferences] = useState(() => {
