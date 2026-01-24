@@ -11,7 +11,7 @@ const IntroScreen = () => {
         <div className="min-h-screen flex flex-col relative pb-24">
             {/* Back Button */}
             <div className="pt-4 px-4 absolute top-0 left-0 z-10">
-                <button className="p-3 rounded-full glass hover:bg-white/10 transition-colors">
+                <button className="p-3 rounded-full border border-white/20 hover:bg-white/10 transition-colors">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M15 18l-6-6 6-6" />
                     </svg>

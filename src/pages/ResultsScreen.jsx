@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import BottomNav from '../components/BottomNav';
 import GlassCard from '../components/GlassCard';
+import { analyzePreferences, getFavoriteCuisines } from '../utils/profileAnalysis';
 
 const ResultsScreen = () => {
     const [currentSection, setCurrentSection] = useState(0);
@@ -14,8 +15,9 @@ const ResultsScreen = () => {
         ? JSON.parse(savedPreferences)
         : { loved: [], hated: [], superLiked: [], unsure: [] };
 
-    // Get unique categories from loved foods
-    const favoriteCuisines = [...new Set(preferences.loved.map(food => food.category))];
+    // Analyze preferences to generate insights
+    const profile = analyzePreferences(preferences);
+    const favoriteCuisines = getFavoriteCuisines(preferences.loved);
 
     const sections = [
         {
@@ -128,7 +130,7 @@ const ResultsScreen = () => {
                 <div className="flex items-center gap-3 mb-4">
                     <button
                         onClick={() => window.history.back()}
-                        className="p-2 rounded-full glass hover:bg-white/10 transition-colors"
+                        className="p-2 rounded-full border border-white/20 hover:bg-white/10 transition-colors"
                     >
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <path d="M15 18l-6-6 6-6" />
@@ -152,6 +154,52 @@ const ResultsScreen = () => {
                         </div>
                     ))}
                 </div>
+            </div>
+
+            {/* Personality Insights - AI Generated */}
+            <div className="px-6 mb-4">
+                <GlassCard className="p-5 bg-black/40">
+                    <div className="flex items-center gap-2 mb-4">
+                        <span className="text-2xl">🧠</span>
+                        <h3 className="text-base font-semibold text-white">Your Taste Personality</h3>
+                    </div>
+
+                    {/* Profile Stats */}
+                    <div className="grid grid-cols-2 gap-3 mb-4">
+                        <div className="bg-white/5 rounded-lg p-3 border border-white/10">
+                            <div className="text-xs text-gray-400 mb-1">Diet Style</div>
+                            <div className="text-sm font-semibold text-primary">{profile.dietStyle}</div>
+                        </div>
+                        <div className="bg-white/5 rounded-lg p-3 border border-white/10">
+                            <div className="text-xs text-gray-400 mb-1">Health Score</div>
+                            <div className="text-sm font-semibold text-primary">{profile.healthScore}%</div>
+                        </div>
+                        <div className="bg-white/5 rounded-lg p-3 border border-white/10">
+                            <div className="text-xs text-gray-400 mb-1">Adventurousness</div>
+                            <div className="text-sm font-semibold text-primary">{profile.adventurousness}%</div>
+                        </div>
+                        <div className="bg-white/5 rounded-lg p-3 border border-white/10">
+                            <div className="text-xs text-gray-400 mb-1">Top Category</div>
+                            <div className="text-sm font-semibold text-primary">{profile.topCategory}</div>
+                        </div>
+                    </div>
+
+                    {/* Insights */}
+                    {profile.insights.length > 0 && (
+                        <div className="space-y-2">
+                            <div className="text-xs text-gray-400 mb-2">Key Insights:</div>
+                            {profile.insights.map((insight, index) => (
+                                <div key={index} className="flex items-start gap-2 bg-white/5 rounded-lg p-2 border border-white/5">
+                                    <span className="text-lg flex-shrink-0">{insight.icon}</span>
+                                    <div>
+                                        <div className="text-xs font-semibold text-white">{insight.title}</div>
+                                        <div className="text-xs text-gray-400">{insight.description}</div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    )}
+                </GlassCard>
             </div>
 
             {/* Lifestyle & Goals */}

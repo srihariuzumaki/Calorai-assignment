@@ -205,7 +205,7 @@ const SwipeScreen = () => {
         <div className="min-h-screen flex flex-col relative pb-[90px] overflow-hidden">
             {/* Top Bar */}
             <div className="pt-6 px-6 mb-4 flex items-center justify-between">
-                <button onClick={() => navigate('/')} className="p-2 rounded-full glass hover:bg-white/10">
+                <button onClick={() => navigate('/')} className="p-2 rounded-full border border-white/20 hover:bg-white/10 transition-colors">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M15 18l-6-6 6-6" />
                     </svg>
