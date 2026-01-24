@@ -9,6 +9,7 @@ import foodsData from '../data/foods.json';
 
 const SwipeCard = ({ food, onSwipe, style, ...props }) => {
     const x = useMotionValue(0);
+    const y = useMotionValue(0);
     const controls = useAnimation();
 
     // Rotate based on x position to simulate physics
@@ -17,27 +18,47 @@ const SwipeCard = ({ food, onSwipe, style, ...props }) => {
     // Opacity indicators for like/dislike overlays
     const heartOpacity = useTransform(x, [20, 100], [0, 1]);
     const nopeOpacity = useTransform(x, [-20, -100], [0, 1]);
+    const superLikeOpacity = useTransform(y, [-20, -100], [0, 1]);
+    const unsureOpacity = useTransform(y, [20, 100], [0, 1]);
 
     const handleDragEnd = async (event, info) => {
-        const offset = info.offset.x;
-        const velocity = info.velocity.x;
+        const offsetX = info.offset.x;
+        const offsetY = info.offset.y;
+        const velocityX = info.velocity.x;
+        const velocityY = info.velocity.y;
 
-        if (offset > 100 || velocity > 500) {
+        // Check vertical swipes first (up/down)
+        if (Math.abs(offsetY) > Math.abs(offsetX)) {
+            if (offsetY < -100 || velocityY < -500) {
+                // Swipe up - Super Like
+                await controls.start({ y: -500, opacity: 0 });
+                onSwipe('super');
+                return;
+            } else if (offsetY > 100 || velocityY > 500) {
+                // Swipe down - Unsure
+                await controls.start({ y: 500, opacity: 0 });
+                onSwipe('unsure');
+                return;
+            }
+        }
+
+        // Check horizontal swipes (left/right)
+        if (offsetX > 100 || velocityX > 500) {
             await controls.start({ x: 500, opacity: 0 });
             onSwipe('right');
-        } else if (offset < -100 || velocity < -500) {
+        } else if (offsetX < -100 || velocityX < -500) {
             await controls.start({ x: -500, opacity: 0 });
             onSwipe('left');
         } else {
-            controls.start({ x: 0 });
+            controls.start({ x: 0, y: 0 });
         }
     };
 
     return (
         <motion.div
-            style={{ x, rotate, ...style }}
-            drag="x"
-            dragConstraints={{ left: 0, right: 0 }}
+            style={{ x, y, rotate, ...style }}
+            drag
+            dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
             onDragEnd={handleDragEnd}
             animate={controls}
             className="absolute top-0 left-0 w-full h-full touch-none cursor-grab active:cursor-grabbing"
@@ -45,7 +66,7 @@ const SwipeCard = ({ food, onSwipe, style, ...props }) => {
         >
             <FoodCard food={food} />
 
-            {/* Like Overlay */}
+            {/* Like Overlay - Right */}
             <motion.div
                 style={{ opacity: heartOpacity }}
                 className="absolute top-8 left-8 border-4 border-green-500 rounded-lg px-4 py-2 text-green-500 font-bold text-4xl -rotate-12 z-20 bg-black/20 backdrop-blur-sm"
@@ -53,12 +74,28 @@ const SwipeCard = ({ food, onSwipe, style, ...props }) => {
                 LIKE
             </motion.div>
 
-            {/* Nope Overlay */}
+            {/* Nope Overlay - Left */}
             <motion.div
                 style={{ opacity: nopeOpacity }}
                 className="absolute top-8 right-8 border-4 border-red-500 rounded-lg px-4 py-2 text-red-500 font-bold text-4xl rotate-12 z-20 bg-black/20 backdrop-blur-sm"
             >
                 NOPE
+            </motion.div>
+
+            {/* Super Like Overlay - Up */}
+            <motion.div
+                style={{ opacity: superLikeOpacity }}
+                className="absolute top-8 left-1/2 -translate-x-1/2 border-4 border-blue-500 rounded-lg px-4 py-2 text-blue-500 font-bold text-4xl z-20 bg-black/20 backdrop-blur-sm"
+            >
+                SUPER LIKE
+            </motion.div>
+
+            {/* Unsure Overlay - Down */}
+            <motion.div
+                style={{ opacity: unsureOpacity }}
+                className="absolute bottom-8 left-1/2 -translate-x-1/2 border-4 border-gray-500 rounded-lg px-4 py-2 text-gray-500 font-bold text-4xl z-20 bg-black/20 backdrop-blur-sm"
+            >
+                UNSURE
             </motion.div>
         </motion.div>
     );
