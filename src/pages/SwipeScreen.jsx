@@ -127,13 +127,25 @@ const SwipeScreen = () => {
 
             {/* Action Buttons */}
             <div className="px-8 flex items-center justify-between mb-4 max-w-[360px] mx-auto w-full">
-                <Button variant="icon" className="!w-16 !h-16 !bg-black/40 !border-red-500/50 text-red-500 shadow-[0_0_15px_rgba(249,83,65,0.2)]">
+                <Button
+                    variant="icon"
+                    className="!w-16 !h-16 !bg-black/40 !border-red-500/50 text-red-500 shadow-[0_0_15px_rgba(249,83,65,0.2)]"
+                    onClick={() => handleButtonSwipe('left')}
+                >
                     ✕
                 </Button>
-                <Button variant="secondary" className="!w-auto px-6 py-2 !rounded-full text-sm font-medium">
+                <Button
+                    variant="secondary"
+                    className="!w-auto px-6 py-2 !rounded-full text-sm font-medium"
+                    onClick={() => handleButtonSwipe('unsure')}
+                >
                     Unsure
                 </Button>
-                <Button variant="icon" className="!w-16 !h-16 !bg-black/40 !border-green-500/50 text-green-500 shadow-[0_0_15px_rgba(75,216,131,0.2)]">
+                <Button
+                    variant="icon"
+                    className="!w-16 !h-16 !bg-black/40 !border-green-500/50 text-green-500 shadow-[0_0_15px_rgba(75,216,131,0.2)]"
+                    onClick={() => handleButtonSwipe('right')}
+                >
                     ♥
                 </Button>
             </div>
