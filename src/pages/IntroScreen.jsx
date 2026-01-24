@@ -8,45 +8,63 @@ const IntroScreen = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="min-h-screen flex flex-col relative pb-[90px]">
-            {/* Header/Title Area */}
-            <div className="pt-12 px-6 mb-8 text-center animate-fade-in">
-                <h1 className="text-white mb-2 leading-tight">
-                    Designing<br />
-                    <span className="text-text-secondary font-normal">Your Food Plan</span>
-                </h1>
-                <p className="text-text-tertiary mt-2">
-                    Help us build your taste profile
-                </p>
+        <div className="min-h-screen flex flex-col relative pb-24 bg-gradient-to-b from-black via-gray-900 to-black">
+            {/* Back Button */}
+            <div className="pt-4 px-4">
+                <button className="p-3 rounded-full glass hover:bg-white/10 transition-colors">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M15 18l-6-6 6-6" />
+                    </svg>
+                </button>
             </div>
 
-            {/* Main Card Area */}
-            <div className="flex-1 px-4 flex flex-col justify-center animate-slide-up">
-                <GlassCard className="w-full aspect-[4/5] flex flex-col items-center justify-between mb-6 relative overflow-hidden group">
+            {/* Title */}
+            <div className="px-6 mt-2 mb-6">
+                <h1 className="text-2xl font-bold text-white leading-tight">
+                    Design Your Food Plan
+                </h1>
+            </div>
 
-                    {/* Decorative Circles/Background Elements */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/20 rounded-full blur-[60px] animate-pulse-slow"></div>
+            {/* Main Card */}
+            <div className="flex-1 px-4 flex items-center justify-center">
+                <GlassCard strong className="w-full max-w-sm p-8 flex flex-col items-center text-center space-y-6 bg-black/40 border-white/10">
 
-                    <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center w-full">
-                        <h2 className="text-3xl font-bold mb-4">
-                            Build Your<br />
-                            <span className="text-primary">Taste Profile</span>
-                        </h2>
-                        <div className="text-6xl mb-6">👅</div>
-                        <p className="text-text-secondary max-w-[260px] leading-relaxed">
-                            Swipe right on foods you love, left on ones you don't.
-                        </p>
+                    {/* Emoji with glow effect */}
+                    <div className="relative">
+                        <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 via-pink-500 to-purple-600 rounded-full blur-2xl opacity-30 animate-pulse-slow"></div>
+                        <div className="relative text-7xl">
+                            😋
+                        </div>
                     </div>
 
-                    <div className="w-full relative z-10">
-                        <Button
-                            variant="primary"
-                            onClick={() => navigate('/swipe')}
-                            className="shadow-[0_0_20px_rgba(75,216,131,0.3)]"
-                        >
-                            Start Swiping
-                        </Button>
-                    </div>
+                    {/* Main Heading */}
+                    <h2 className="text-2xl font-bold text-white leading-tight">
+                        Build Your Taste Profile
+                    </h2>
+
+                    {/* Description */}
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                        Swipe right on foods you love, left on foods you don't.
+                    </p>
+
+                    {/* Additional Info */}
+                    <p className="text-gray-400 text-xs leading-relaxed">
+                        This helps us recommend meals you'll love eating.
+                    </p>
+
+                    {/* CTA Button */}
+                    <Button
+                        variant="primary"
+                        onClick={() => navigate('/swipe')}
+                        className="!bg-primary !text-black font-semibold shadow-lg shadow-primary/30 hover:shadow-primary/50 transition-all"
+                    >
+                        Start Swiping
+                    </Button>
+
+                    {/* Time estimate */}
+                    <p className="text-gray-500 text-xs">
+                        Takes about 2 minutes.
+                    </p>
                 </GlassCard>
             </div>
 
