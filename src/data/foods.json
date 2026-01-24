@@ -3,180 +3,210 @@
         "id": 1,
         "name": "Avocado Toast",
         "category": "Breakfast",
-        "image": "🥑"
+        "image": "🥑",
+        "recipe": "### Ingredients\n- 2 slices of thick-cut sourdough or multigrain bread\n- 1 large ripe avocado\n- 1 tsp lemon juice\n- 1/4 tsp red pepper flakes\n- Sea salt and freshly ground black pepper\n- Optional: 1 radishes thinly sliced, or a poached egg\n- 1 tbsp high-quality olive oil\n\n### Instructions\n1. **Toast the Bread:** Toast your bread slices in a toaster or on a griddle with a bit of butter until they are golden brown and crispy.\n2. **Prepare the Avocado:** In a small bowl, combine the avocado flesh, lemon juice, salt, and pepper. Mash with a fork until you reach your desired consistency (smooth or slightly chunky).\n3. **Assemble:** Spread a thick layer of the avocado mixture onto each slice of toast.\n4. **Garnish:** Top with radishes or a poached egg if using. Sprinkle with red pepper flakes and a final pinch of sea salt.\n5. **Finish:** Drizzle with olive oil and serve immediately while the bread is still warm."
     },
     {
         "id": 2,
         "name": "Caesar Salad",
         "category": "Salads",
-        "image": "🥗"
+        "image": "🥗",
+        "recipe": "### Ingredients\n- 2 large heads of romaine lettuce, leaves separated and torn\n- 1/2 cup freshly grated Parmesan cheese\n- 1 cup seasoned croutons\n- Dressing: 2 garlic cloves minced, 2 tbsp mayonnaise, 1 tsp Dijon mustard, 1 tsp Worcestershire sauce, 2 tbsp lemon juice, 1/3 cup olive oil\n- Freshly ground black pepper\n\n### Instructions\n1. **Prepare the Dressing:** In a small bowl, whisk together the garlic, mayonnaise, mustard, Worcestershire sauce, and lemon juice. Gradually whisk in the olive oil until the dressing is emulsified. Season with pepper.\n2. **Prep the Greens:** Wash and dry the romaine leaves thoroughly. Tear into bite-sized pieces and place in a large chilled salad bowl.\n3. **Combine:** Add half of the Parmesan cheese and the croutons to the lettuce.\n4. **Toss:** Pour the dressing over the salad and toss gently to coat every leaf.\n5. **Serve:** Top with the remaining Parmesan cheese and extra black pepper. For a full meal, add grilled chicken or salmon."
     },
     {
         "id": 3,
         "name": "Margherita Pizza",
         "category": "Italian",
-        "image": "🍕"
+        "image": "🍕",
+        "recipe": "### Ingredients\n- 1 ball of pizza dough (approx. 250g)\n- 1/2 cup crushed San Marzano tomatoes\n- 4 oz fresh mozzarella cheese, sliced or torn\n- 6-8 fresh basil leaves\n- 1 tbsp extra virgin olive oil\n- Pinch of salt\n- Semolina or flour for dusting\n\n### Instructions\n1. **Preheat:** Place a pizza stone in the oven and preheat to 500°F (260°C) for at least 45 minutes.\n2. **Stretch the Dough:** On a lightly floured surface, stretch the dough into a 12-inch circle. Transfer to a pizza peel dusted with semolina.\n3. **Top the Pizza:** Spread the crushed tomatoes in a thin layer over the dough, leaving a 1-inch border. Lightly salt the sauce. Arrange the mozzarella pieces evenly.\n4. **Bake:** Slide the pizza onto the hot stone. Bake for 8-10 minutes until the crust is charred and the cheese is bubbly and browned.\n5. **Finish:** Remove from the oven. Immediately top with fresh basil leaves and a drizzle of olive oil. Let rest for 2 minutes before slicing."
     },
     {
         "id": 4,
         "name": "Sushi Roll",
         "category": "Japanese",
-        "image": "🍣"
+        "image": "🍣",
+        "recipe": "### Ingredients\n- 2 cups sushi rice, cooked and seasoned with rice vinegar, sugar, and salt\n- 4 sheets of Nori (dried seaweed)\n- 4 oz sashmi-grade tuna or salmon, sliced into strips\n- 1 small cucumber, julienned\n- 1 ripe avocado, sliced\n- Soy sauce, wasabi, and pickled ginger for serving\n\n### Instructions\n1. **Prepare the Workspace:** Place a bamboo sushi mat (makisu) on a flat surface. Lay a sheet of nori, shiny side down, on the mat.\n2. **Spread the Rice:** Wet your hands to prevent sticking and spread a thin, even layer of rice over the nori, leaving 1 inch bare at the top.\n3. **Add Fillings:** Layout the fish strips, cucumber, and avocado in a line across the center of the rice.\n4. **Roll:** Using the mat, lift the edge of the nori closest to you and roll it over the fillings. Apply firm pressure to create a tight cylinder. Seal the edge with a dab of water.\n5. **Slice:** Use a very sharp, wet knife to slice the roll into 6-8 even pieces. Serve with traditional accompaniments."
     },
     {
         "id": 5,
         "name": "Chicken Tacos",
         "category": "Mexican",
-        "image": "🌮"
+        "image": "🌮",
+        "recipe": "### Ingredients\n- 1 lb chicken breast or thighs, cut into small cubes\n- 8 small corn or flour tortillas\n- Seasoning: 1 tsp cumin, 1 tsp chili powder, 1/2 tsp onion powder, 1/2 tsp garlic powder, salt and pepper\n- Toppings: Finely chopped white onion, fresh cilantro, crumbled cotija cheese, salsa verde, lime wedges\n- 1 tbsp vegetable oil\n\n### Instructions\n1. **Season the Chicken:** In a bowl, toss the chicken with the dry seasonings and oil until well coated.\n2. **Cook the Chicken:** Heat a large skillet over medium-high heat. Add the chicken and cook, stirring occasionally, for 6-8 minutes until golden and cooked through.\n3. **Warm the Tortillas:** Briefly heat the tortillas in a dry skillet or over an open flame until soft and slightly charred.\n4. **Assemble:** Place a generous spoonful of chicken in the center of each tortilla.\n5. **Garnish:** Top with onions, cilantro, cheese, and salsa. Serve immediately with lime wedges on the side for squeezing over the top."
     },
     {
         "id": 6,
         "name": "Beef Burger",
         "category": "American",
-        "image": "🍔"
+        "image": "🍔",
+        "recipe": "### Ingredients\n- 1 lb ground beef (80/20 blend for best flavor)\n- 4 brioche burger buns\n- 4 slices of sharp cheddar or American cheese\n- Lettuce, tomato slices, red onion rings, and pickles\n- Sauce: 1/4 cup mayo, 1 tbsp mustard, 1 tbsp ketchup, 1 tsp relish\n- Salt and coarse black pepper\n\n### Instructions\n1. **Form Patties:** Gently shape the beef into 4 equal patties. Make a slight indentation in the center of each to prevent bulging while cooking. Season generously with salt and pepper.\n2. **Prepare Sauce:** In a small bowl, mix the mayo, mustard, ketchup, and relish until smooth.\n3. **Grill the Burgers:** Heat a grill or cast-iron skillet to high. Cook patties for 3-4 minutes per side for medium doneness. Add cheese in the last minute and cover to melt.\n4. **Toast Buns:** Lightly butter the buns and toast them until golden brown.\n5. **Build the Burger:** Spread sauce on the bottom bun. Layer with lettuce, tomato, the cheesy patty, onion, and pickles. Close with the top bun and enjoy."
     },
     {
         "id": 7,
         "name": "Pad Thai",
         "category": "Thai",
-        "image": "🍜"
+        "image": "🍜",
+        "recipe": "### Ingredients\n- 8 oz flat rice noodles\n- 1/2 lb shrimp or sliced chicken\n- 2 eggs, lightly beaten\n- 1/2 cup firm tofu, cubed\n- 1 cup fresh bean sprouts\n- Sauce: 3 tbsp tamarind paste, 3 tbsp fish sauce, 3 tbsp brown sugar, 1 tbsp lime juice, 1/2 tsp chili flakes\n- Garnish: Crushed peanuts, lime wedges, cilantro, scallions\n\n### Instructions\n1. **Prep Noodles:** Soak noodles in hot water for 20-30 minutes until soft but still firm to the bite. Drain.\n2. **Make Sauce:** Whisk together tamarind, fish sauce, sugar, lime juice, and chili flakes in a bowl.\n3. **Stir-Fry Protein:** Heat oil in a wok. Cook shrimp or chicken until opaque. Push to the side. Add tofu and cook until lightly browned.\n4. **Scramble Eggs:** Pour in eggs and scramble until just set. Add the drained noodles and the sauce. Toss vigorously over high heat until noodles absorb the sauce.\n5. **Finish:** Mix in bean sprouts and scallions. Serve topped with plenty of crushed peanuts and lime."
     },
     {
         "id": 8,
         "name": "Greek Salad",
         "category": "Salads",
-        "image": "🥗"
+        "image": "🥗",
+        "recipe": "### Ingredients\n- 1 large English cucumber, chopped\n- 4 large tomatoes, cut into wedges\n- 1/2 red onion, thinly sliced\n- 1 green bell pepper, chopped\n- 1/2 cup Kalamata olives, pitted\n- 6 oz block of Greek Feta cheese, cubed or sliced\n- Dressing: 1/4 cup extra virgin olive oil, 2 tbsp red wine vinegar, 1 tsp dried oregano, salt and pepper\n\n### Instructions\n1. **Prep Vegetables:** In a large bowl, combine the cucumber, tomatoes, red onion, bell pepper, and olives.\n2. **Make Dressing:** In a small jar, shake together the olive oil, red wine vinegar, oregano, salt, and pepper until combined.\n3. **Combine:** Pour the dressing over the vegetables and toss gently to coat.\n4. **Add Feta:** Place the feta cheese on top of the salad. You can either leave it in one large piece or crumble it gently over the top.\n5. **Rest:** Let the salad sit for 10-15 minutes at room temperature before serving to allow the flavors to meld. Serve with crusty bread."
     },
     {
         "id": 9,
         "name": "Chocolate Cake",
         "category": "Desserts",
-        "image": "🍰"
+        "image": "🍰",
+        "recipe": "### Ingredients\n- 2 cups all-purpose flour\n- 2 cups sugar\n- 3/4 cup unsweetened cocoa powder\n- 2 tsp baking soda, 1 tsp baking powder, 1 tsp salt\n- 1 cup buttermilk\n- 1/2 cup vegetable oil\n- 2 large eggs\n- 2 tsp vanilla extract\n- 1 cup hot coffee or boiling water\n\n### Instructions\n1. **Setup:** Preheat oven to 350°F (175°C). Grease and flour two 9-inch round cake pans.\n2. **Mix Dry:** Whisk together flour, sugar, cocoa, baking soda, baking powder, and salt in a large bowl.\n3. **Add Wet:** Add buttermilk, oil, eggs, and vanilla. Mix on medium speed for 2 minutes.\n4. **Finish Batter:** Stir in the hot coffee by hand until the batter is smooth (it will be thin). Pour evenly into the prepared pans.\n5. **Bake:** Bake for 30-35 minutes until a toothpick comes out clean. Cool for 10 minutes in pans, then turn out onto wire racks to cool completely before frosting."
     },
     {
         "id": 10,
         "name": "Grilled Salmon",
         "category": "Seafood",
-        "image": "🐟"
+        "image": "🐟",
+        "recipe": "### Ingredients\n- 1.5 lbs salmon fillets (center-cut)\n- Marinade: 2 tbsp olive oil, 1 tbsp honey, 1 tbsp soy sauce, 2 cloves garlic minced, 1 tbsp fresh dill chopped, zest of 1 lemon\n- Salt and pepper\n- Lemon slices for grilling\n\n### Instructions\n1. **Marinate:** In a shallow dish, whisk together the ingredients for the marinade. Place salmon in the dish, skin side up, and refrigerate for 30-60 minutes.\n2. **Preheat Grill:** Clean and oil your grill grates. Heat to medium-high (375-400°F).\n3. **Season:** Remove salmon from marinade and season both sides with salt and pepper.\n4. **Grill:** Place salmon on the grill, skin side down. Close the lid and cook for 5-6 minutes. Carefully flip and cook for another 3-5 minutes until the internal temperature reaches 145°F.\n5. **Serve:** Garnish with fresh lemon slices and extra dill. Excellent served with roasted vegetables or a light quinoa salad."
     },
     {
         "id": 11,
         "name": "Pasta Carbonara",
         "category": "Italian",
-        "image": "🍝"
+        "image": "🍝",
+        "recipe": "### Ingredients\n- 12 oz Spaghetti\n- 4 oz guanciale or pancetta, cubed\n- 3 large eggs\n- 1 cup freshly grated Pecorino Romano cheese\n- Lots of coarsely ground black pepper\n- 1 tbsp salt for pasta water\n\n### Instructions\n1. **Boil Pasta:** Cook spaghetti in a large pot of salted boiling water until al dente. Reserve 1 cup of starchy pasta water before draining.\n2. **Cook Guanciale:** While pasta cooks, sauté the guanciale in a large skillet over medium heat until the fat has rendered and it is crispy. Turn off the heat.\n3. **Whisk Eggs:** In a medium bowl, whisk together the eggs and cheese until thick and creamy. Add a generous amount of black pepper.\n4. **Assemble:** Add the hot drained pasta to the skillet with the guanciale. Toss to coat. Quickly whisk 1/4 cup of pasta water into the egg mixture.\n5. **Creamy Sauce:** Pour the egg mixture over the pasta. Toss vigorously for 1-2 minutes until a creamy sauce forms. Add more pasta water if needed to adjust the silkiness. Serve immediately on warm plates."
     },
     {
         "id": 12,
         "name": "Chicken Wings",
         "category": "American",
-        "image": "🍗"
+        "image": "🍗",
+        "recipe": "### Ingredients\n- 2 lbs chicken wings, tips removed and separated into flats and drums\n- 1 tbsp baking powder (for extra crispiness)\n- 1 tsp salt\n- Sauce: 1/3 cup Buffalo sauce, 2 tbsp melted butter, 1 tsp honey\n- Serving: Carrots, celery, and blue cheese or ranch dressing\n\n### Instructions\n1. **Dry the Wings:** Pat the wings extremely dry with paper towels. Toss with baking powder and salt until evenly coated.\n2. **Air Fry or Bake:** For air frying, cook at 400°F (200°C) for 25-30 minutes, turning halfway. For baking, place on a wire rack over a baking sheet and bake at 425°F for 45-50 minutes.\n3. **Make Sauce:** While wings cook, whisk together the Buffalo sauce, butter, and honey in a large bowl.\n4. **Toss:** As soon as the wings are crispy and golden, transfer them to the sauce bowl and toss until well coated.\n5. **Serve:** Plate immediately with cold vegetable sticks and your favorite creamy dipping sauce."
     },
     {
         "id": 13,
         "name": "Veggie Wrap",
         "category": "Healthy",
-        "image": "🌯"
+        "image": "🌯",
+        "recipe": "### Ingredients\n- 2 large whole wheat or spinach tortillas\n- 1/2 cup hummus (plain or roasted red pepper)\n- 1 cup baby spinach leaves\n- 1/4 cup shredded carrots\n- 1/2 red bell pepper, julienned\n- 1/4 English cucumber, thinly sliced strips\n- 1/2 avocado, sliced\n- 2 tbsp sunflower seeds or sprouts for crunch\n\n### Instructions\n1. **Layer the Base:** Spread about 1/4 cup of hummus in a thin, even layer over the center of each tortilla, leaving a 1-inch border.\n2. **Add Greens:** Top the hummus with a generous handful of spinach.\n3. **Add Veggies:** Arrange the carrots, bell peppers, cucumber, and avocado in a vertical row across the center.\n4. **Season:** Sprinkle with salt, pepper, and sunflower seeds or sprouts.\n5. **Roll:** Fold in the sides of the tortilla, then tightly roll from the bottom up. Slice diagonally and serve with a side of fruit or a light yogurt dip."
     },
     {
         "id": 14,
         "name": "Ramen Bowl",
         "category": "Japanese",
-        "image": "🍜"
+        "image": "🍜",
+        "recipe": "### Ingredients\n- 2 packs high-quality ramen noodles\n- 1 quart pork or chicken stock\n- 2 tbsp white miso paste or soy sauce\n- 1 inch ginger, sliced\n- 2 garlic cloves, smashed\n- Toppings: Soft-boiled egg, sliced green onions, nori sheets, bamboo shoots, corn, and chili oil\n\n### Instructions\n1. **Flavor the Broth:** In a large pot, simmer the stock with ginger and garlic for 15 minutes. Remove the solids and whisk in the miso paste or soy sauce until dissolved.\n2. **Prep Toppings:** Boil an egg for exactly 6 min 30 sec, then shock in ice water and peel. Slice in half. Prepare your other vegetables and meats.\n3. **Cook Noodles:** Boil the ramen noodles according to package instructions (usually 2-3 minutes) in a separate pot. Drain well.\n4. **Assemble:** Divide the hot noodles into two large deep bowls. Pour the flavorful broth over the noodles.\n5. **Garnish:** Arrange the egg, green onions, nori, and other toppings neatly on top. Finish with a drizzle of spicy chili oil."
     },
     {
         "id": 15,
         "name": "Fruit Smoothie",
         "category": "Beverages",
-        "image": "🥤"
+        "image": "🥤",
+        "recipe": "### Ingredients\n- 1 cup frozen mixed berries (strawberries, blueberries, raspberries)\n- 1 frozen banana, sliced\n- 1/2 cup Greek yogurt\n- 1 cup almond milk or coconut water\n- 1 tsp honey or maple syrup (optional)\n- 1 tbsp chia seeds or flax seeds\n- Handful of fresh spinach (optional for extra nutrients)\n\n### Instructions\n1. **Layer Liquid First:** Pour the milk or coconut water into the blender jar first to ensure smooth blending.\n2. **Add Solids:** Add the yogurt, chia seeds, and spinach if using.\n3. **Add Frozen Fruit:** Place the berries and banana on top. This helps the blades catch the fruit more easily.\n4. **Blend:** Start on low speed and gradually increase to high. Blend for 45-60 seconds until perfectly smooth and creamy.\n5. **Taste and Adjust:** If too thick, add more liquid. If too thin, add more frozen fruit. Pour into a tall glass and enjoy immediately."
     },
     {
         "id": 16,
         "name": "Steak",
         "category": "American",
-        "image": "🥩"
+        "image": "🥩",
+        "recipe": "### Ingredients\n- 2 pieces of Ribeye or New York Strip steak (1.5 inches thick)\n- 2 tbsp high-smoke point oil (grapeseed or avocado oil)\n- 3 tbsp unsalted butter\n- 5 cloves garlic, smashed\n- 3 sprigs fresh rosemary or thyme\n- Coarse sea salt and cracked black pepper\n\n### Instructions\n1. **Temper:** Remove steaks from the fridge 45 minutes before cooking. Pat extremely dry with paper towels and season heavily with salt and pepper.\n2. **Sear:** Heat a cast-iron skillet over high heat until smoking. Add oil. Place steaks in the pan and sear undisturbed for 3 minutes per side to develop a deep crust.\n3. **Baste:** Reduce heat to medium. Add butter, garlic, and herbs. Once butter is foaming, tilt the pan and spoon the hot butter over the steaks continuously for 2-3 minutes.\n4. **Check Temp:** Use a meat thermometer to reach 130°F for medium-rare or 140°F for medium.\n5. **Rest:** Transfer steaks to a cutting board. Pour the pan juices over them. Let rest for at least 8-10 minutes before slicing against the grain."
     },
     {
         "id": 17,
         "name": "Falafel Wrap",
         "category": "Mediterranean",
-        "image": "🥙"
+        "image": "🥙",
+        "recipe": "### Ingredients\n- 6-8 Falafel balls (fried or baked)\n- 2 large pita breads or flatbreads\n- 1/4 cup Tahini sauce\n- 1/2 cup Israeli salad (diced cucumber, tomato, onion and parsley)\n- 2 tbsp pickled turnips or onions\n- 1/2 cup shredded red cabbage\n- 2 tbsp Hummus\n\n### Instructions\n1. **Warm the Bread:** Lightly toast your pita or flatbread on a griddle until soft and warm.\n2. **Base Layer:** Spread a generous layer of hummus across the center of the bread.\n3. **Build the Center:** Place the falafel balls over the hummus. Use a fork to slightly crush them so they stay in place.\n4. **Add Freshness:** Top with the Israeli salad, shredded cabbage, and pickles.\n5. **The Finish:** Drizzle generously with tahini sauce. For extra kick, add a dash of hot sauce (Harissa or Sriracha). Roll or fold and serve immediately."
     },
     {
         "id": 18,
         "name": "Ice Cream",
         "category": "Desserts",
-        "image": "🍦"
+        "image": "🍦",
+        "recipe": "### Ingredients\n- 2 cups heavy cream\n- 1 cup whole milk\n- 3/4 cup sugar\n- 1 vanilla bean or 1 tbsp vanilla extract\n- 5 large egg yolks\n- Pinch of salt\n\n### Instructions\n1. **Heat the Base:** In a medium saucepan, simmer the cream, milk, half the sugar, and salt until the sugar dissolves. Steep the vanilla for 10 minutes.\n2. **Temper Eggs:** Whisk the egg yolks with the remaining sugar. Slowly whisk in 1 cup of the warm cream mixture into the yolks, then pour the yolk mixture into the saucepan.\n3. **Cook Custard:** Cook over low heat, stirring constantly, until the mixture thickens enough to coat the back of a spoon (170°F). Do not boil.\n4. **Chill:** Strain the custard into a bowl. Chill in the refrigerator for at least 4-6 hours, or ideally overnight.\n5. **Churn:** Churn in an ice cream maker according to manufacturer's instructions. Transfer to an airtight container and freeze for 2 hours for a scoopable consistency."
     },
     {
         "id": 19,
         "name": "Pancakes",
         "category": "Breakfast",
-        "image": "🥞"
+        "image": "🥞",
+        "recipe": "### Ingredients\n- 1.5 cups all-purpose flour\n- 3.5 tsp baking powder\n- 1 tbsp sugar, 1 tsp salt\n- 1.25 cups milk\n- 1 egg\n- 3 tbsp melted butter\n- 1 tsp vanilla extract\n- Serving: Maple syrup, butter, fresh blueberries\n\n### Instructions\n1. **Whisk Dry:** In a large bowl, sift together the flour, baking powder, sugar, and salt.\n2. **Mix Wet:** In another bowl, whisk together the milk, egg, melted butter, and vanilla.\n3. **Combine:** Make a well in the center of the dry ingredients and pour in the wet ingredients. Whisk just until combined—lumps are okay! Don't overmix.\n4. **Cook:** Heat a non-stick griddle over medium heat. Lightly oil. Pour 1/4 cup of batter per pancake. Cook until bubbles form on the surface and the edges look set.\n5. **Flip:** Flip and cook for another 1-2 minutes until golden brown. Serve hot with heaps of butter and maple syrup."
     },
     {
         "id": 20,
         "name": "Fried Rice",
         "category": "Asian",
-        "image": "🍚"
+        "image": "🍚",
+        "recipe": "### Ingredients\n- 3 cups cold day-old jasmine rice\n- 2 tbsp vegetable oil\n- 2 eggs, beaten\n- 1/2 cup peas and carrots (frozen is fine)\n- 2 cloves garlic, minced\n- Sauce: 2 tbsp soy sauce, 1 tsp sesame oil, 1/2 tsp sugar, pinch of white pepper\n- Garnish: Sliced scallions and sesame seeds\n\n### Instructions\n1. **Sauté Aromatics:** Heat oil in a large wok or skillet over high heat. Sauté garlic and vegetables for 2 minutes.\n2. **Scramble Eggs:** Push the vegetables to one side. Pour in the eggs and scramble quickly until set. Break into pieces.\n3. **Add Rice:** Add the cold rice. Use a spatula to break up any clumps. Stir-fry for 3-4 minutes until the rice is heated through and starting to crisp.\n4. **Season:** Pour the soy sauce and sesame oil mixture over the rice. Toss continuously until the color is even.\n5. **Serve:** Garnish with fresh green onions and sesame seeds. Best served hot with a side of chili crisp for extra flavor."
     },
     {
         "id": 21,
         "name": "Croissant",
         "category": "Breakfast",
-        "image": "🥐"
+        "image": "🥐",
+        "recipe": "### Ingredients\n- 4 cups bread flour\n- 1/4 cup sugar\n- 2 tsp sea salt\n- 1 tbsp instant yeast\n- 1.5 cups cold milk\n- 1.5 cups (3 sticks) high-fat unsalted butter, for laminating\n- 1 egg for egg wash\n\n### Instructions\n1. **Make the Dough:** Mix flour, sugar, salt, and yeast. Add milk and knead until a smooth dough forms. Shape into a rectangle, wrap in plastic, and chill for 2 hours.\n2. **Butter Block:** Flatten the cold butter into a precise 7-inch square between parchment paper. Chill.\n3. **Laminate:** Roll the dough into a 10-inch square. Place the butter block diagonally in the center. Fold the dough corners over the butter and seal. This is your 'lock-in'.\n4. **Four-Fold:** Roll into a long rectangle, then fold like a letter (top third down, bottom third up). Chill for 1 hour. Repeat this process two more times for a total of 3 'turns'.\n5. **Shape and Bake:** Roll out to 1/8 inch thickness. Cut into triangles. Roll tightly from the base to the tip. Proof for 2 hours until doubled. Brush with egg wash and bake at 400°F (200°C) for 15-20 minutes until dark golden."
     },
     {
         "id": 22,
         "name": "Burrito",
         "category": "Mexican",
-        "image": "🌯"
+        "image": "🌯",
+        "recipe": "### Ingredients\n- 1 large (12-inch) flour tortilla\n- 1/2 cup Lime-Cilantro rice\n- 1/2 cup black beans, seasoned\n- 4 oz grilled steak or chicken strips\n- 1/4 cup shredded Monterey Jack cheese\n- 2 tbsp salsa fresca\n- 2 tbsp guacamole\n- 1 tbsp sour cream\n\n### Instructions\n1. **Warm the Tortilla:** Heat the tortilla on a large griddle until very soft and pliable. This prevents tearing during rolling.\n2. **Base Layer:** Spread the rice and beans in a line across the center of the tortilla.\n3. **The Fillings:** Add the grilled meat, then the cheese, salsa, guacamole, and sour cream.\n4. **The Roll:** Fold both sides of the tortilla over the filling. While holding them in, use your thumbs to lift the bottom edge and roll it over the center, tucking the contents in tightly as you go.\n5. **Sear:** Place the burrito seam-side down on a medium-hot dry skillet. Grill for 1 minute per side until the exterior is crispy and the cheese inside is melted."
     },
     {
         "id": 23,
         "name": "Donuts",
         "category": "Desserts",
-        "image": "🍩"
+        "image": "🍩",
+        "recipe": "### Ingredients\n- 1 cup whole milk, warm\n- 1 tbsp instant yeast\n- 1/3 cup sugar\n- 2 large eggs\n- 1 tsp salt, 1 tsp vanilla\n- 4 cups all-purpose flour\n- 6 tbsp butter, room temperature\n- Oil for frying\n- Glaze: 2 cups powdered sugar, 1/4 cup milk, 1 tsp vanilla\n\n### Instructions\n1. **Make Dough:** Combine milk, yeast, and sugar. Mix in eggs and flour. Add butter one tablespoon at a time while kneading. Knead until smooth and elastic (10 minutes). Let rise until doubled (1.5 hours).\n2. **Roll and Cut:** Roll dough to 1/2 inch thickness. Cut into circles with a hole in the center. Place on parchment paper squares and let proof again for 45 minutes.\n3. **Fry:** Heat oil to 350°F (175°C). Carefully drop donuts into oil. Fry for 1 minute per side until golden brown.\n4. **Dry:** Drain on a wire rack for 1 minute.\n5. **Glaze:** While still warm, dip the top of the donuts into the glaze. Add sprinkles immediately if using. Let set for 10 minutes before eating."
     },
     {
         "id": 24,
         "name": "Lobster",
         "category": "Seafood",
-        "image": "🦞"
+        "image": "🦞",
+        "recipe": "### Ingredients\n- 2 whole live lobsters (1.5 lbs each)\n- 1 stick unsalted butter\n- 1/2 lemon, juiced\n- 2 cloves garlic, smashed\n- Fresh chives for garnish\n- 1 tbsp sea salt for the water\n\n### Instructions\n1. **Boil Water:** Fill a very large pot with 2 gallons of water. Add 1 tbsp of salt per gallon. Bring to a rapid boil.\n2. **Cook:** Plunge the lobsters head-first into the water. Cover and cook for 12-14 minutes (approx. 8 minutes per pound). The lobsters are done when they turn bright red and an antenna pulls out easily.\n3. **Clarify Butter:** While lobsters cook, melt the butter with the garlic in a small saucepan over low heat. Skim off the white solids and discard. Stir in the lemon juice.\n4. **Drain:** Remove lobsters from the pot and let drain for 2 minutes. Use a heavy knife or crackers to split the claws and tail.\n5. **Serve:** Place the lobster pieces on a large platter. Garnish with chives and serve with individual small bowls of the warm lemon-garlic butter for dipping."
     },
     {
         "id": 25,
         "name": "Pho",
         "category": "Vietnamese",
-        "image": "🍲"
+        "image": "🍲",
+        "recipe": "### Ingredients\n- 4 lbs beef marrow bones\n- 1 lb sirloin steak, thinly sliced (raw)\n- 1 package flat rice noodles\n- Aromatics: 1 onion charred, 3 inches ginger charred, 3 star anise, 1 cinnamon stick, 3 cloves\n- Garnish: Fresh basil, bean sprouts, lime wedges, sliced jalapeños, Hoisin and Sriracha sauce\n\n### Instructions\n1. **Parboil Bones:** Boil the bones for 10 minutes, then drain and rinse them thoroughly. This ensures a clear broth.\n2. **Simmer Broth:** Return bones to a clean pot with 4 quarts of water. Add the charred aromatics. Simmer on low for at least 6-8 hours, skimming fats regularly.\n3. **Season:** Strain the broth and discard solids. Season with 1/4 cup fish sauce and 2 tbsp rock sugar. Keep broth at a rolling boil.\n4. **Prep Noodles:** Soak and boil rice noodles separately until soft. Drain well.\n5. **Assemble:** Place nodes and some thinly sliced raw beef in deep bowls. Pour the boiling hot broth over the beef—it will cook it instantly. Pile on fresh bean sprouts, basil, and lime as you eat."
     },
     {
         "id": 26,
         "name": "BBQ Ribs",
         "category": "American",
-        "image": "🍖"
+        "image": "🍖",
+        "recipe": "### Ingredients\n- 2 racks of Baby Back pork ribs\n- Dry Rub: 1/4 cup brown sugar, 1 tbsp paprika, 1 tsp garlic powder, 1 tsp onion powder, 1/2 tsp cayenne, salt and pepper\n- 1 cup high-quality BBQ sauce\n- 1/4 cup apple juice (for spraying)\n\n### Instructions\n1. **Prep the Ribs:** Remove the thin membrane from the back of the ribs. Rub generously on both sides with the dry rub seasonings.\n2. **Setup Oven/Smoker:** Preheat your oven or smoker to 225°F (110°C).\n3. **Slow Cook:** Wrap ribs tightly in foil with a splash of apple juice. Bake for 3 hours until tender. This 'Texas Crutch' method ensures juicy ribs.\n4. **Glaze:** Open the foil. Brush both sides liberally with BBQ sauce. If using an oven, turn on the broiler.\n5. **Caramelize:** Place the ribs under the broiler or increase heat in the smoker for 10-15 minutes, brushing with more sauce every 5 minutes until the sauce is dark, bubbly, and caramelized. Slice between the bones and serve with more sauce."
     },
     {
         "id": 27,
         "name": "Quinoa Bowl",
         "category": "Healthy",
-        "image": "🥗"
+        "image": "🥗",
+        "recipe": "### Ingredients\n- 1 cup dry quinoa, rinsed\n- 2 cups vegetable broth\n- 1 sweet potato, peeled and cubed\n- 1 cup chopped kale or baby spinach\n- 1/2 cup cooked chickpeas\n- 1/2 avocado, sliced\n- Dressing: 2 tbsp tahini, 1 tbsp lemon juice, 1 tbsp maple syrup, 1 tbsp hot water\n\n### Instructions\n1. **Cook Quinoa:** In a medium pot, bring quinoa and broth to a boil. Reduce heat to low, cover, and simmer for 15 minutes. Let sit off heat for 5 minutes, then fluff with a fork.\n2. **Roast Potato:** Toss sweet potato cubes with olive oil and salt. Roast at 400°F (200°C) for 20-25 minutes until tender.\n3. **Sauté Greens:** Briefly sauté the kale with a little garlic and oil until wilted (2 minutes).\n4. **Make Dressing:** Whisk tahini, lemon juice, maple syrup, and water in a small jar until smooth and creamy.\n5. **Assemble:** Place a base of quinoa in a large bowl. Arrange groups of potatoes, chickpeas, kale, and avocado on top. Drizzle generously with the tahini dressing."
     },
     {
         "id": 28,
         "name": "Tiramisu",
         "category": "Desserts",
-        "image": "🍰"
+        "image": "🍰",
+        "recipe": "### Ingredients\n- 1.5 cups strong espresso, cooled\n- 2 tbsp dark rum or marsala wine\n- 1 package (7oz) Ladyfinger biscuits (Savoiardi)\n- Filling: 3 large egg yolks, 1/2 cup sugar, 1/2 tsp vanilla, 8 oz Mascarpone cheese, 1 cup heavy whipping cream\n- Unsweetened cocoa powder for dusting\n\n### Instructions\n1. **Prep Espresso:** Combine the cold espresso and rum in a shallow dish.\n2. **Make Zabaglione:** Whisk yolks and sugar in a heatproof bowl over a pot of simmering water until thick and pale (5 minutes). Set aside to cool, then fold in the mascarpone and vanilla.\n3. **Whip Cream:** In another bowl, beat heavy cream until stiff peaks form. Gently fold the whipped cream into the mascarpone mixture until fluffy.\n4. **Layer:** Quickly dip each ladyfinger into the espresso (don't soak!). Lay them in a single layer at the bottom of an 8x8 pan. Spread half the mascarpone mixture over the top. Repeat with another layer of dipped biscuits and the rest of the cream.\n5. **Chill:** Cover and refrigerate for at least 8 hours (ideally 24). Dust the entire surface with a thick layer of cocoa powder just before serving."
     },
     {
         "id": 29,
         "name": "Dim Sum",
         "category": "Chinese",
-        "image": "🥟"
+        "image": "🥟",
+        "recipe": "### Ingredients\n- 20-24 Dumpling wrappers (Gyoza or Siu Mai skins)\n- Filling: 1/2 lb ground pork, 1/4 lb shrimp minced, 1/2 cup cabbage finely shredded, 1 tsp ginger grated, 1 tbsp soy sauce, 1 tsp sesame oil\n- Drip: 2 tbsp soy sauce, 1 tbsp black vinegar, 1 tsp chili oil\n- Cabbage leaves for steaming base\n\n### Instructions\n1. **Mix Filling:** In a large bowl, combine the pork, shrimp, cabbage, ginger, soy sauce, and sesame oil. Mix vigorously in one direction until the mixture becomes sticky.\n2. **Shape:** Place a level tablespoon of filling in the center of a wrapper. Wet the edges with water and pleat the dough over the top to create a small pouch or crescent shape.\n3. **Steam:** Line a bamboo steamer basket with large cabbage leaves or parchment paper circles. Arrange the dumplings, ensuring they are not touching.\n4. **Cook:** Place the steamer over a wok of rapidly boiling water. Cover and steam for 8-10 minutes until the skins are translucent and the filling is firm.\n5. **Serve:** Mix the dipping sauce ingredients together. Serve the dumplings hot, straight from the steamer basket."
     },
     {
         "id": 30,
         "name": "Nachos",
         "category": "Mexican",
-        "image": "🧀"
+        "image": "🧀",
+        "recipe": "### Ingredients\n- 1 large bag high-quality corn tortilla chips\n- 1/2 lb ground beef, cooked and seasoned with taco spices\n- 2 cups shredded Mexican Blend cheese (cheddar, jack, asadero)\n- 1/2 cup pickled jalapeños\n- 1/4 cup sliced black olives\n- Fresh Toppings: Pico de gallo, guacamole, sour cream, and fresh cilantro\n\n### Instructions\n1. **Layering is Key:** Preheat oven to 400°F (200°C). Lay half the chips on a large rimmed baking sheet. Sprinkle with half the meat and half the cheese.\n2. **Double Down:** Add the remaining chips, and top with the rest of the meat, cheese, jalapeños, and olives. This ensures no 'naked' chips at the bottom.\n3. **Bake:** Bake for 5-8 minutes until the cheese is bubbling and just starting to brown in spots.\n4. **Prep Fresh Stuff:** While baking, prepare your fresh salsa and guacamole.\n5. **Finish and Serve:** Remove from the oven. Dollop generously with sour cream and guacamole. Sprinkle with fresh cilantro and serve the entire tray immediately while hot and crispy."
     }
 ]

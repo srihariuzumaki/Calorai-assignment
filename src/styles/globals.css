@@ -69,14 +69,38 @@ body {
 }
 
 /* Fade in up animation for list items */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
+/* Recipe Markdown Styling */
+.recipe-content {
+  line-height: 1.6;
+}
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.recipe-content h3 {
+  color: #4BD883;
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.5rem;
+}
+
+.recipe-content ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.recipe-content ol {
+  list-style-type: decimal;
+  padding-left: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.recipe-content li {
+  margin-bottom: 0.5rem;
+  color: #d1d5db;
+}
+
+.recipe-content strong {
+  color: white;
 }
