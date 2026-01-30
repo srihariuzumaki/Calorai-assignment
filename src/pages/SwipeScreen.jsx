@@ -78,6 +78,29 @@ const SwipeCard = ({ food, onSwipe, style, ...props }) => {
         }
     };
 
+    // Handle initial animation for undone cards
+    useEffect(() => {
+        if (food.undoneDirection) {
+            let initialX = 0;
+            let initialY = 0;
+
+            if (food.undoneDirection === 'right') initialX = 500;
+            else if (food.undoneDirection === 'left') initialX = -500;
+            else if (food.undoneDirection === 'super') initialY = -500;
+            else if (food.undoneDirection === 'unsure') initialY = 500;
+
+            x.set(initialX);
+            y.set(initialY);
+
+            controls.start({
+                x: 0,
+                y: 0,
+                opacity: 1,
+                transition: { type: 'spring', damping: 25, stiffness: 120 }
+            });
+        }
+    }, [food.undoneDirection]);
+
     return (
         <motion.div
             style={{ x, y, rotate, ...style }}
@@ -201,8 +224,8 @@ const SwipeScreen = () => {
         // Remove from history
         setSwipeHistory(prev => prev.slice(0, -1));
 
-        // Restore card to stack
-        setCards(prev => [card, ...prev]);
+        // Restore card to stack with direction info for animation
+        setCards(prev => [{ ...card, undoneDirection: direction }, ...prev]);
 
         // Remove from preferences
         setPreferences(prev => {
