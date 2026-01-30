@@ -351,11 +351,25 @@ const ResultsScreen = () => {
                                         section.items.map((item, index) => (
                                             <div
                                                 key={index}
-                                                className="flex items-center gap-3 bg-white/5 p-2 rounded-xl border border-white/5"
+                                                className="flex items-center gap-3 py-3 border-b border-white/5 last:border-0"
                                             >
-                                                <div className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></div>
-                                                <span className="text-sm text-white">{item.name}</span>
-                                                <span className="ml-auto text-[10px] text-gray-500">{item.category}</span>
+                                                <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-lg flex-shrink-0 border border-white/5">
+                                                    {item.image ? (
+                                                        item.image.startsWith('http') ? (
+                                                            <img src={item.image} alt="" className="w-full h-full object-cover rounded-lg" />
+                                                        ) : (
+                                                            <span>{item.image}</span>
+                                                        )
+                                                    ) : (
+                                                        <span className="text-primary/50 text-xs font-bold">{item.name.charAt(0)}</span>
+                                                    )}
+                                                </div>
+                                                <div className="flex-1 min-w-0">
+                                                    <div className="text-sm font-medium text-white truncate">{item.name}</div>
+                                                    {item.category && (
+                                                        <div className="text-[10px] text-gray-500 uppercase tracking-wider">{item.category}</div>
+                                                    )}
+                                                </div>
                                             </div>
                                         ))
                                     ) : (

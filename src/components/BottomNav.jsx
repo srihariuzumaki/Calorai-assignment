@@ -26,7 +26,9 @@ const BottomNav = () => {
 
     // Update active index when route changes
     useEffect(() => {
-        setActiveIndex(getActiveIndex());
+        const index = getActiveIndex();
+        setActiveIndex(index);
+        setPillPosition(index);
     }, [location.pathname]);
 
     const isSearchActive = location.pathname === '/search';

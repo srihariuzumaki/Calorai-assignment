@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { motion, useMotionValue, useTransform, useAnimation } from 'framer-motion';
+import { motion, useMotionValue, useTransform, useAnimation, AnimatePresence } from 'framer-motion';
 import Button from '../components/Button';
 import BottomNav from '../components/BottomNav';
 import ProgressBar from '../components/ProgressBar';
@@ -16,11 +16,34 @@ const SwipeCard = ({ food, onSwipe, style, ...props }) => {
     // Rotate based on x position to simulate physics
     const rotate = useTransform(x, [-200, 200], [-30, 30]);
 
-    // Opacity indicators for like/dislike overlays
-    const heartOpacity = useTransform(x, [20, 100], [0, 1]);
-    const nopeOpacity = useTransform(x, [-20, -100], [0, 1]);
-    const superLikeOpacity = useTransform(y, [-20, -100], [0, 1]);
-    const unsureOpacity = useTransform(y, [20, 100], [0, 1]);
+    // Opacity indicators for like/dislike overlays with dominant axis check
+    const heartOpacity = useTransform([x, y], ([latestX, latestY]) => {
+        if (Math.abs(latestX) > Math.abs(latestY) && latestX > 0) {
+            return Math.min(1, Math.max(0, (latestX - 20) / 80));
+        }
+        return 0;
+    });
+
+    const nopeOpacity = useTransform([x, y], ([latestX, latestY]) => {
+        if (Math.abs(latestX) > Math.abs(latestY) && latestX < 0) {
+            return Math.min(1, Math.max(0, (-latestX - 20) / 80));
+        }
+        return 0;
+    });
+
+    const superLikeOpacity = useTransform([x, y], ([latestX, latestY]) => {
+        if (Math.abs(latestY) > Math.abs(latestX) && latestY < 0) {
+            return Math.min(1, Math.max(0, (-latestY - 20) / 80));
+        }
+        return 0;
+    });
+
+    const unsureOpacity = useTransform([x, y], ([latestX, latestY]) => {
+        if (Math.abs(latestY) > Math.abs(latestX) && latestY > 0) {
+            return Math.min(1, Math.max(0, (latestY - 20) / 80));
+        }
+        return 0;
+    });
 
     const handleDragEnd = async (event, info) => {
         const offsetX = info.offset.x;
@@ -67,18 +90,18 @@ const SwipeCard = ({ food, onSwipe, style, ...props }) => {
         >
             <FoodCard food={food} />
 
-            {/* Like Overlay - Right */}
+            {/* Like Overlay - Right (Positioned on top-right for swipe right) */}
             <motion.div
                 style={{ opacity: heartOpacity }}
-                className="absolute top-8 left-8 border-4 border-green-500 rounded-lg px-4 py-2 text-green-500 font-bold text-4xl -rotate-12 z-20 bg-black/20 backdrop-blur-sm"
+                className="absolute top-8 right-8 border-4 border-green-500 rounded-lg px-4 py-2 text-green-500 font-bold text-4xl -rotate-12 z-20 bg-black/20 backdrop-blur-sm"
             >
                 LIKE
             </motion.div>
 
-            {/* Nope Overlay - Left */}
+            {/* Nope Overlay - Left (Positioned on top-left for swipe left) */}
             <motion.div
                 style={{ opacity: nopeOpacity }}
-                className="absolute top-8 right-8 border-4 border-red-500 rounded-lg px-4 py-2 text-red-500 font-bold text-4xl rotate-12 z-20 bg-black/20 backdrop-blur-sm"
+                className="absolute top-8 left-8 border-4 border-red-500 rounded-lg px-4 py-2 text-red-500 font-bold text-4xl rotate-12 z-20 bg-black/20 backdrop-blur-sm"
             >
                 NOPE
             </motion.div>
@@ -222,12 +245,12 @@ const SwipeScreen = () => {
         <div className="min-h-screen flex flex-col relative pb-[90px] overflow-hidden">
             {/* Top Bar */}
             <div className="pt-6 px-6 mb-4 flex items-center justify-between">
-                <button onClick={() => navigate('/')} className="p-2 rounded-full border border-white/20 hover:bg-white/10 transition-colors">
+                <button onClick={() => navigate('/')} className="p-2 rounded-full border border-white/20 hover:bg-white/10 transition-colors z-10">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M15 18l-6-6 6-6" />
                     </svg>
                 </button>
-                <span className="font-semibold">Taste Profile</span>
+                <h1 className="flex-1 text-center font-semibold text-lg">Taste Profile</h1>
                 <div className="w-10"></div> {/* Spacer for center alignment */}
             </div>
 
@@ -235,18 +258,24 @@ const SwipeScreen = () => {
             <div className="px-6 mb-4">
                 <div className="flex items-center justify-between mb-2">
                     <span className="text-sm text-gray-400">{swipedCount} / {totalCards}</span>
-                    {swipeHistory.length > 0 && (
-                        <button
-                            onClick={handleUndo}
-                            className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 transition-all duration-200 active:scale-95"
-                        >
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3 7v6h6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M21 17a9 9 0 00-9-9 9 9 0 00-6 2.3L3 13" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            <span className="text-xs text-white font-medium">Undo</span>
-                        </button>
-                    )}
+                    <AnimatePresence mode="wait">
+                        {swipeHistory.length > 0 && (
+                            <motion.button
+                                initial={{ opacity: 0, scale: 0.8, x: 20 }}
+                                animate={{ opacity: 1, scale: 1, x: 0 }}
+                                exit={{ opacity: 0, scale: 0.8, x: 20 }}
+                                key="undo-button"
+                                onClick={handleUndo}
+                                className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 transition-all duration-200 active:scale-95"
+                            >
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 7v6h6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    <path d="M21 17a9 9 0 00-9-9 9 9 0 00-6 2.3L3 13" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                                <span className="text-xs text-white font-medium">Undo</span>
+                            </motion.button>
+                        )}
+                    </AnimatePresence>
                 </div>
                 <ProgressBar current={swipedCount} total={totalCards} />
             </div>
